@@ -1,0 +1,99 @@
+.header {
+  padding: 36px 0 60px;
+  background-color: #1c57c9;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+}
+
+.logo-group span {
+  width: 42px;
+  height: 42px;
+  margin-right: 13px;
+  border-radius: 50%;
+  background-color: #1ece7a;
+}
+
+.header-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.21;
+}
+
+.header-nav,
+.button-group {
+  display: none;
+}
+
+.menu-button {
+  padding: 10px 18px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1c57c9;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.21;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+  .header-nav,
+  .button-group {
+    display: block;
+  }
+
+  .header-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-link a {
+    color: #fff;
+  }
+
+  .header-link:nth-child(2) a,
+  .header-link:nth-child(3) a,
+  .header-link:nth-child(4) a,
+  .header-link:last-child a {
+    opacity: 0.4;
+  }
+
+  .header-link a {
+    height: 18px;
+    padding: 10px 25px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .button-group button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.21;
+  }
+
+  .button-group button:first-child {
+    margin-right: 20px;
+    color: #262b36;
+  }
+
+  .button-group button:last-child {
+    color: #3acf6e;
+  }
+}
