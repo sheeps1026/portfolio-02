@@ -38,6 +38,23 @@ li {
   list-style-type: none;
 }
 
+/* Utilities */
+.fill-button {
+  transition: opacity 250ms ease-in-out;
+}
+
+.fill-button:hover {
+  opacity: 0.5;
+}
+
+.fill-button.inverted {
+  transition: opacity 250ms ease-in-out;
+}
+
+.fill-button.inverted:hover {
+  opacity: 1;
+}
+
 /* > 768px (Desktop)*/
 @media screen and (min-width: 768px) {
 }
