@@ -49,6 +49,10 @@
 }
 
 @media screen and (min-width: 992px) {
+  .header {
+    background: linear-gradient(90deg, #1c57c9 72%, #fff 28%);
+  }
+
   .header-nav,
   .button-group {
     display: block;
