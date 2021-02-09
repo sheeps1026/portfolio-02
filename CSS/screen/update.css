@@ -1,6 +1,5 @@
 .update {
   text-align: center;
-  margin-bottom: 168px;
   padding-bottom: 169px;
   border-bottom-left-radius: 40%;
   background: linear-gradient(360deg, #1c57c9 80%, #fff 20%);
@@ -90,7 +89,6 @@
 
 @media screen and (min-width: 768px) {
   .update {
-    margin-bottom: 124px;
     padding-bottom: 156px;
     background: linear-gradient(360deg, #1c57c9 68%, #fff 32%);
   }
@@ -128,8 +126,7 @@
 @media screen and (min-width: 992px) {
   .update {
     text-align: start;
-    /* 230px = 66px +  164px*/
-    margin-bottom: 230px;
+    margin-bottom: 71px;
     padding-bottom: 182px;
     border-bottom-left-radius: 100%;
     background: linear-gradient(270deg, #1c57c9 55%, #fff 45%);

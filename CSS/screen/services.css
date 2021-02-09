@@ -1,3 +1,9 @@
+.services-group {
+  margin-bottom: 148px;
+  padding: 168px 0 153px;
+  background: linear-gradient(#fff, #ecf0f7);
+}
+
 .services {
   text-align: center;
   margin-bottom: 186px;
@@ -123,7 +129,7 @@
   height: 96px;
   border-radius: 16px;
   background-color: #fff;
-  filter: drop-shadow(4px 4px 24px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(4px 4px 24px rgba(0, 0, 0, 0.08));
 }
 
 .services-card__not {
@@ -153,7 +159,7 @@
   height: 10px;
   margin-right: 16px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #606c84;
 }
 
 .services-point span:first-child,
@@ -171,6 +177,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .services-group {
+    margin-bottom: 168px;
+    padding: 124px 0 136px;
+  }
+
   .services {
     margin-bottom: 168px;
   }
@@ -220,6 +231,11 @@
 }
 
 @media screen and (min-width: 992px) {
+  .services-group {
+    margin-bottom: 285px;
+    padding: 159px 0 234px;
+  }
+
   .services {
     margin-bottom: 216px;
   }
