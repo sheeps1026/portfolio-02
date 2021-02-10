@@ -9,22 +9,8 @@
   margin-bottom: 186px;
 }
 
-.services-category {
-  display: block;
-  margin-bottom: 17px;
-  color: #2053d1;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.21;
-  letter-spacing: 1em;
-}
-
-.services-title {
+.services .title {
   margin-bottom: 24px;
-  color: #262b36;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2103125;
 }
 
 .services-desc {
@@ -184,11 +170,6 @@
 
   .services {
     margin-bottom: 168px;
-  }
-
-  .services-title {
-    font-size: 42px;
-    line-height: 1.210238095238095;
   }
 
   .services-image-box {

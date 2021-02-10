@@ -68,22 +68,8 @@
   line-height: 1.21;
 }
 
-.features-category {
-  display: block;
-  margin-bottom: 17px;
-  color: #2053d1;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.21;
-  letter-spacing: 1em;
-}
-
-.features-title {
+.features .title {
   margin-bottom: 24px;
-  color: #262b36;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2103125;
 }
 
 .features-desc {
@@ -154,11 +140,6 @@
   .features-image-desc p {
     font-size: 15px;
     padding: 10px;
-  }
-
-  .features-title {
-    font-size: 42px;
-    line-height: 1.210238095238095;
   }
 
   .features-desc {

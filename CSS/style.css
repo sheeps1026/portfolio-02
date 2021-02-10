@@ -39,6 +39,23 @@ li {
 }
 
 /* Utilities */
+.category {
+  display: block;
+  margin-bottom: 17px;
+  color: #2053d1;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.21;
+  letter-spacing: 1em;
+}
+
+.title {
+  color: #262b36;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2103;
+}
+
 .fill-button {
   transition: opacity 250ms ease-in-out;
 }
@@ -56,6 +73,9 @@ li {
 }
 
 @media screen and (min-width: 768px) {
+  .title {
+    font-size: 42px;
+  }
 }
 
 @media screen and (min-width: 992px) {

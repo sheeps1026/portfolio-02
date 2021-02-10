@@ -2,22 +2,8 @@
   text-align: center;
 }
 
-.testimonials-category {
-  display: block;
-  margin-bottom: 17px;
-  color: #2053d1;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.21;
-  letter-spacing: 1em;
-}
-
-.testimonials-title {
+.testimonials .title {
   margin-bottom: 64px;
-  color: #262b36;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2103125;
 }
 
 .testimonials-card-group {
@@ -94,9 +80,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .testimonials-title {
-    font-size: 42px;
-    line-height: 1.210238095238095;
+  .testimonials .title {
     margin-bottom: 116px;
   }
 
@@ -156,11 +140,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .testimonials-category {
-    margin-bottom: 16px;
-  }
-
-  .testimonials-title {
+  .testimonials .title {
     line-height: 1.523809523809524;
     margin-bottom: 136px;
   }
