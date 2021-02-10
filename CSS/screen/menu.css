@@ -1,0 +1,81 @@
+.menu {
+  text-align: center;
+  padding: 24px 0 42px;
+  background-color: #fff;
+}
+
+.menu header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+.menu h1 {
+  color: #262b36;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.21;
+}
+
+.close-button {
+  padding: 10px 18px;
+  border: 1px solid #fa4949;
+  border-radius: 5px;
+  color: #fa4949;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.21;
+  opacity: 0.5;
+}
+
+.menu nav {
+  margin-bottom: 44px;
+}
+
+.menu-link a {
+  color: #606b86;
+  font-size: 24px;
+  line-height: 2.6666;
+}
+
+.menu-link a:hover {
+  color: #2053d1;
+  font-weight: 600;
+}
+
+.menu-button-group button {
+  width: 132px;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.21;
+}
+
+.menu-button-group button:first-child {
+  margin-right: 20px;
+  color: #fff;
+  background-color: #3acf6e;
+}
+
+.menu-button-group button:last-child {
+  border: 1px solid #3acf6e;
+  color: #3acf6e;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    padding-top: 44px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    display: none;
+  }
+}

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./CSS/reset-style.css" />
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/screen/header.css" />
+    <link rel="stylesheet" href="./CSS/screen/menu.css" />
     <link rel="stylesheet" href="./CSS/screen/landing.css" />
     <link rel="stylesheet" href="./CSS/screen/features.css" />
     <link rel="stylesheet" href="./CSS/screen/update.css" />
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="./CSS/screen/testimonials.css" />
     <link rel="stylesheet" href="./CSS/screen/conatact.css" />
     <link rel="stylesheet" href="./CSS/screen/footer.css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -65,6 +67,42 @@
         </div>
       </div>
     </header>
+
+    <section class="menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <header>
+              <h1>Simhome Menu</h1>
+              <button type="button" class="close-button">Close</button>
+            </header>
+            <nav>
+              <ul class="menu-links">
+                <li class="menu-link">
+                  <a href="#">Home</a>
+                </li>
+                <li class="menu-link">
+                  <a href="#">Features</a>
+                </li>
+                <li class="menu-link">
+                  <a href="#">Services</a>
+                </li>
+                <li class="menu-link">
+                  <a href="#">Contact</a>
+                </li>
+                <li class="menu-link">
+                  <a href="#">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="menu-button-group">
+              <button type="button">Get Started</button>
+              <button type="button">Sign In</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="landing">
       <div class="container">
@@ -523,22 +561,22 @@
                   <nav>
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <a href="#" class="fill-button">Home</a>
                       </li>
                       <li>
-                        <a href="#">Features</a>
+                        <a href="#" class="fill-button">Features</a>
                       </li>
                       <li>
-                        <a href="#">Services</a>
+                        <a href="#" class="fill-button">Services</a>
                       </li>
                       <li>
-                        <a href="#">Testimonials</a>
+                        <a href="#" class="fill-button">Testimonials</a>
                       </li>
                       <li>
-                        <a href="#">We Care</a>
+                        <a href="#" class="fill-button">We Care</a>
                       </li>
                       <li>
-                        <a href="#">Idea Exchange</a>
+                        <a href="#" class="fill-button">Idea Exchange</a>
                       </li>
                     </ul>
                   </nav>
@@ -548,16 +586,16 @@
                   <nav>
                     <ul>
                       <li>
-                        <a href="#">Contact Us</a>
+                        <a href="#" class="fill-button">Contact Us</a>
                       </li>
                       <li>
-                        <a href="#">Privacy & Policy</a>
+                        <a href="#" class="fill-button">Privacy & Policy</a>
                       </li>
                       <li>
-                        <a href="#">Terms & Conditions</a>
+                        <a href="#" class="fill-button">Terms & Conditions</a>
                       </li>
                       <li>
-                        <a href="#">FAQ</a>
+                        <a href="#" class="fill-button">FAQ</a>
                       </li>
                     </ul>
                   </nav>
@@ -567,7 +605,11 @@
                   <nav>
                     <ul>
                       <li>
-                        <a href="https://www.facebook.com/">
+                        <a
+                          href="https://www.facebook.com/"
+                          target="_blank"
+                          class="fill-button"
+                        >
                           <img
                             src="./assets/image/footer/Facebook.png"
                             alt="Facebook"
@@ -576,7 +618,11 @@
                         </a>
                       </li>
                       <li>
-                        <a href="https://twitter.com/">
+                        <a
+                          href="https://twitter.com/"
+                          target="_blank"
+                          class="fill-button"
+                        >
                           <img
                             src="./assets/image/footer/Twitter.png"
                             alt="Twitter"
@@ -585,7 +631,11 @@
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.instagram.com/">
+                        <a
+                          href="https://www.instagram.com/"
+                          target="_blank"
+                          class="fill-button"
+                        >
                           <img
                             src="./assets/image/footer/Instagram.png"
                             alt="Instagram"
