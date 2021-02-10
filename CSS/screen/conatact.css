@@ -1,0 +1,107 @@
+.contact {
+  text-align: center;
+  margin-bottom: 168px;
+}
+
+.contact .title {
+  margin-bottom: 64px;
+}
+
+.contact img {
+  width: auto;
+  height: 272px;
+  margin-bottom: 64px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.contact-card__message {
+  margin-bottom: 36px;
+}
+
+.contact-card label {
+  text-align: start;
+  margin-bottom: 12px;
+  color: #262b36;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contact input,
+.contact textarea {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+
+.contact input {
+  height: 48px;
+}
+
+.contact textarea {
+  height: 120px;
+}
+
+.contact button {
+  display: block;
+  padding: 10px 10px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  background-color: #3acf6e;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    text-align: center;
+    margin-bottom: 248px;
+  }
+
+  .contact img {
+    height: 362px;
+  }
+
+  .contact-card {
+    width: 60%;
+    margin: 0 auto 16px;
+  }
+
+  .contact-card__message {
+    margin-bottom: 36px;
+  }
+
+  .contact button {
+    margin: 0 20%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact {
+    text-align: start;
+    margin-bottom: 248px;
+  }
+
+  .contact .title {
+    max-width: 420px;
+  }
+
+  .contact-card {
+    margin: 0 auto 16px 0;
+  }
+
+  .contact-card__message {
+    margin-bottom: 36px;
+  }
+
+  .contact button {
+    margin: 0;
+    padding: 15px 37px;
+    background: linear-gradient(90deg, #3acf6e 70%, #fff 30%);
+  }
+}
