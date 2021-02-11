@@ -39,6 +39,10 @@ li {
 }
 
 /* Utilities */
+a:hover {
+  cursor: pointer;
+}
+
 .category {
   display: block;
   margin-bottom: 17px;
