@@ -1,6 +1,7 @@
 "use strict";
 
 // Section
+const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const menu = document.querySelector(".menu");
 const landing = document.querySelector(".landing");
@@ -64,6 +65,13 @@ testimonialsBtnFooter.addEventListener("click", () => {
   testimonials.scrollIntoView();
 });
 
-// menuBtn.addEventListener("click", () => {
-//   menu.classList.toggle("active");
-// });
+// 메뉴 버튼
+menuBtn.addEventListener("click", () => {
+  menu.classList.add("active");
+  landing.style.opacity = "0.6";
+});
+
+closeBtn.addEventListener("click", () => {
+  menu.classList.remove("active");
+  landing.style.opacity = "1";
+});

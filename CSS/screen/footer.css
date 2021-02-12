@@ -132,6 +132,7 @@
 
   .footer-card {
     width: 200px;
+    margin-right: 36px;
   }
 
   .footer-card:first-child,
