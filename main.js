@@ -1,7 +1,6 @@
 "use strict";
 
 // Section
-const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const menu = document.querySelector(".menu");
 const landing = document.querySelector(".landing");
@@ -11,25 +10,32 @@ const testimonials = document.querySelector(".testimonials");
 const contact = document.querySelector(".contact");
 const footer = document.querySelector(".footer");
 
-// header
+const landingHeight = landing.getBoundingClientRect().height;
+
+// Header
 const featuresBtnHeader = document.querySelector(".features-button__header");
 const servicesBtnHeader = document.querySelector(".services-button__header");
 const contactBtnHeader = document.querySelector(".contact-button__header");
 const faqBtnHeader = document.querySelector(".faq-button__header");
 
-// menu
+// Menu
 const closeBtn = document.querySelector(".close-button");
 
-// landing
+// Landing
 const menuBtn = document.querySelector(".menu-button");
 
-// footer
+// Footer
 const homeBtnFooter = document.querySelector(".home-button__footer");
 const featuresBtnFooter = document.querySelector(".features-button__footer");
 const servicesBtnFooter = document.querySelector(".services-button__footer");
 const testimonialsBtnFooter = document.querySelector(
   ".testimonials-button__footer"
 );
+
+// Arrow-up
+const arrowBtn = document.querySelector(".arrow-btn");
+const arrowUp = document.querySelector(".arrow-up");
+const arrowDown = document.querySelector(".arrow-down");
 
 // header 버튼 클릭시 이동
 featuresBtnHeader.addEventListener("click", () => {
@@ -68,10 +74,27 @@ testimonialsBtnFooter.addEventListener("click", () => {
 // 메뉴 버튼
 menuBtn.addEventListener("click", () => {
   menu.classList.add("active");
-  landing.style.opacity = "0.6";
 });
 
 closeBtn.addEventListener("click", () => {
   menu.classList.remove("active");
-  landing.style.opacity = "1";
+});
+
+// 스크롤 내렸을 때 arrow-btn 보이게
+document.addEventListener("scroll", () => {
+  if (window.scrollY > landingHeight / 2) {
+    arrowBtn.classList.add("active");
+  } else {
+    arrowBtn.classList.remove("active");
+  }
+});
+
+// arrow-up 버튼 클릭하면 landing으로
+arrowUp.addEventListener("click", () => {
+  landing.scrollIntoView();
+});
+
+// arrow-down 버튼 클릭하면 footer로
+arrowDown.addEventListener("click", () => {
+  footer.scrollIntoView();
 });
