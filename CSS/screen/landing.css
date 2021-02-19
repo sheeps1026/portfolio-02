@@ -10,7 +10,7 @@
   margin-bottom: 36px;
   font-size: 42px;
   font-weight: 700;
-  line-height: 1.30952380952381;
+  line-height: 1.3095;
   color: #fff;
 }
 
@@ -21,7 +21,7 @@
 .landing-desc {
   margin-bottom: 48px;
   font-size: 18px;
-  line-height: 1.555555555555556;
+  line-height: 1.5555;
   color: #fff;
 }
 
@@ -60,7 +60,7 @@
 
   .landing-title {
     font-size: 55px;
-    line-height: 1.345454545454545;
+    line-height: 1.3454;
   }
 
   .landing-desc {

@@ -9,7 +9,7 @@
   font-size: 18px;
   font-weight: 500;
   font-style: italic;
-  line-height: 1.777777777777778;
+  line-height: 1.7777;
 }
 
 .features-image-box {
@@ -76,7 +76,7 @@
   margin-bottom: 52px;
   color: #606b86;
   font-size: 18px;
-  line-height: 1.555555555555556;
+  line-height: 1.5555;
 }
 
 .features-card {
@@ -105,7 +105,7 @@
 .features-card p {
   color: #606b86;
   font-size: 13px;
-  line-height: 1.538461538461538;
+  line-height: 1.5384;
 }
 
 @media screen and (min-width: 768px) {

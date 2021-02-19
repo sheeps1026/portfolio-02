@@ -70,7 +70,7 @@
 .update-card-content p {
   color: #fff;
   font-size: 13px;
-  line-height: 1.538461538461538;
+  line-height: 1.5384;
 }
 
 @media screen and (min-width: 768px) {
@@ -119,7 +119,7 @@
 
   .update .title {
     margin-bottom: 62px;
-    line-height: 1.523809523809524;
+    line-height: 1.5238;
   }
 
   .update-image-group {

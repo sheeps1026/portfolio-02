@@ -35,7 +35,7 @@
   margin-bottom: 36px;
   color: #262b36;
   font-size: 18px;
-  line-height: 1.555555555555556;
+  line-height: 1.5555;
 }
 
 .testimonials-card dl dt {
@@ -49,7 +49,7 @@
 .testimonials-card dl dd {
   color: #606b86;
   font-size: 13px;
-  line-height: 1.846153846153846;
+  line-height: 1.8461;
 }
 
 .testimonials-point {
@@ -141,7 +141,7 @@
 
 @media screen and (min-width: 992px) {
   .testimonials .title {
-    line-height: 1.523809523809524;
+    line-height: 1.5238;
     margin-bottom: 136px;
   }
 

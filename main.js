@@ -37,7 +37,7 @@ const arrowBtn = document.querySelector(".arrow-btn");
 const arrowUp = document.querySelector(".arrow-up");
 const arrowDown = document.querySelector(".arrow-down");
 
-// header 버튼 클릭시 이동
+// header 섹션 버튼 클릭시 이동
 featuresBtnHeader.addEventListener("click", () => {
   features.scrollIntoView();
 });
@@ -54,7 +54,7 @@ faqBtnHeader.addEventListener("click", () => {
   footer.scrollIntoView();
 });
 
-// footer 버튼 클릭시 이동
+// footer 섹션 버튼 클릭시 이동
 homeBtnFooter.addEventListener("click", () => {
   header.scrollIntoView();
 });
@@ -89,12 +89,41 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// arrow-up 버튼 클릭하면 landing으로
 arrowUp.addEventListener("click", () => {
   landing.scrollIntoView();
 });
 
-// arrow-down 버튼 클릭하면 footer로
 arrowDown.addEventListener("click", () => {
   footer.scrollIntoView();
 });
+
+// 슬라이더
+const CLASS_SHOWING = "showing";
+const servicesFirstCard = document.querySelector(".services-card:first-child");
+
+// servicesFirstCard.classList.add(CLASS_SHOWING);
+
+function slide() {
+  const currentSlide = document.querySelector(`.${CLASS_SHOWING}`);
+
+  if (window.innerWidth < 992) {
+    if (currentSlide) {
+      // currentSlide를 찾으면 (2)
+      currentSlide.classList.remove(CLASS_SHOWING);
+      const nextSlide = currentSlide.nextElementSibling;
+
+      if (nextSlide) {
+        nextSlide.classList.add(CLASS_SHOWING);
+      } else {
+        // 마지막 슬라이드면 첫 번째로 이동
+        servicesFirstCard.classList.add(CLASS_SHOWING);
+      }
+    } else {
+      // null이라서 .showing을 첫 번째 슬라이드로 올림 (1)
+      servicesFirstCard.classList.add(CLASS_SHOWING);
+    }
+  }
+}
+slide();
+
+setInterval(slide, 2000);

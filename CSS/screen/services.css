@@ -6,7 +6,8 @@
 
 .services {
   text-align: center;
-  margin-bottom: 186px;
+  /* 186 + 96(services-card: 96) */
+  margin-bottom: 276px;
 }
 
 .services .title {
@@ -17,7 +18,7 @@
   margin-bottom: 64px;
   color: #606b86;
   font-size: 18px;
-  line-height: 1.555555555555556;
+  line-height: 1.5555;
 }
 
 .services-image-box {
@@ -100,29 +101,37 @@
   right: 20%;
 }
 
-.services-card-group {
+.services-slider {
   display: flex;
-  justify-content: center;
-  margin-bottom: 36px;
+  position: relative;
 }
 
+/* postion: absolute, left: 50%, transform: translateX(-50%)를 해서 중앙 정렬 */
 .services-card {
   display: flex;
-  justify-content: center;
+  text-align: start;
+  position: absolute;
   align-items: center;
+  left: 50%;
   padding: 20px 24px;
   width: 315px;
   height: 96px;
   border-radius: 16px;
   background-color: #fff;
-  filter: drop-shadow(4px 4px 24px rgba(0, 0, 0, 0.08));
+  transform: translateX(-50%);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  z-index: 0;
 }
 
-.services-card__not {
-  display: none;
+.showing {
+  filter: drop-shadow(4px 4px 24px rgba(0, 0, 0, 0.08));
+  opacity: 1;
+  z-index: 1;
 }
 
 .services-card img {
+  display: block;
   width: auto;
   height: 55px;
   margin-right: 24px;
@@ -132,34 +141,7 @@
   color: #262b36;
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.777777777777778;
-}
-
-.services-point {
-  display: flex;
-  justify-content: center;
-}
-
-.services-point span {
-  width: 10px;
-  height: 10px;
-  margin-right: 16px;
-  border-radius: 50%;
-  background-color: #606c84;
-}
-
-.services-point span:first-child,
-.services-point span:nth-child(3),
-.services-point span:last-child {
-  opacity: 0.2;
-}
-
-.services-point span:nth-child(2) {
-  background-color: #1c5cc9;
-}
-
-.services-point span:last-child {
-  margin-right: 0;
+  line-height: 1.7777;
 }
 
 @media screen and (min-width: 768px) {
@@ -169,7 +151,8 @@
   }
 
   .services {
-    margin-bottom: 168px;
+    /* 168 + 96 */
+    margin-bottom: 264px;
   }
 
   .services-image-box {
@@ -186,29 +169,6 @@
     height: 41px;
     font-size: 15px;
   }
-
-  .services-card-group {
-    margin-bottom: 40px;
-    overflow: hidden;
-  }
-
-  .services-card-group__first {
-    display: flex;
-  }
-
-  .services-card-group__first .services-card {
-    display: flex;
-  }
-
-  .services-card-group__first .services-card:nth-child(2) {
-    margin: 0 16px;
-  }
-
-  .services-point span {
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -218,7 +178,8 @@
   }
 
   .services {
-    margin-bottom: 216px;
+    /* 216 - 20(마지막 services-card의 margin-bottom 제외) */
+    margin-bottom: 196px;
   }
 
   .services-image-desc__1 {
@@ -262,7 +223,7 @@
   }
 
   .services-image-desc__9 {
-    bottom: 7%%;
+    bottom: 7%;
     left: 37%;
   }
 
@@ -271,39 +232,21 @@
     right: 35%;
   }
 
-  .services-card-group {
-    flex-direction: column;
-    align-items: center;
-    overflow: visible;
-    margin-bottom: 0;
-  }
-
-  .services-card-group__second,
-  .services-card-group__third {
-    display: flex;
-  }
-
-  .services-card-group__first,
-  .services-card-group__second {
-    margin-bottom: 20px;
+  .services-slider {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .services-card {
-    display: flex;
-    justify-content: flex-start;
-    text-align: start;
-    width: 360px;
+    position: static;
+    margin: 0 10px 20px;
+    transform: none;
+    opacity: 1;
   }
 
-  .services-card-group__first .services-card:nth-child(2) {
-    margin: 0 20px;
-  }
-
-  .services-card:nth-child(2) {
-    margin: 0 20px;
-  }
-
-  .services-point {
-    display: none;
+  .services-card:nth-child(7),
+  .services-card:nth-child(8),
+  .services-card:nth-child(9) {
+    margin: 0 10px 20px;
   }
 }
