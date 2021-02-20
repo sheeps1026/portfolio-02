@@ -97,33 +97,66 @@ arrowDown.addEventListener("click", () => {
   footer.scrollIntoView();
 });
 
-// 슬라이더
-const CLASS_SHOWING = "showing";
+// services 슬라이더
 const servicesFirstCard = document.querySelector(".services-card:first-child");
+const CLASS_SERVICES_SHOWING = "services__showing";
 
 // servicesFirstCard.classList.add(CLASS_SHOWING);
 
-function slide() {
-  const currentSlide = document.querySelector(`.${CLASS_SHOWING}`);
+function servicesSlide() {
+  const servicesCurrentSlide = document.querySelector(
+    `.${CLASS_SERVICES_SHOWING}`
+  );
 
   if (window.innerWidth < 992) {
-    if (currentSlide) {
-      // currentSlide를 찾으면 (2)
-      currentSlide.classList.remove(CLASS_SHOWING);
-      const nextSlide = currentSlide.nextElementSibling;
+    if (servicesCurrentSlide) {
+      // servicesCurrentSlide를 찾으면 (2)
+      servicesCurrentSlide.classList.remove(CLASS_SERVICES_SHOWING);
+      const servicesNextSlide = servicesCurrentSlide.nextElementSibling;
 
-      if (nextSlide) {
-        nextSlide.classList.add(CLASS_SHOWING);
+      if (servicesNextSlide) {
+        // (3)
+        servicesNextSlide.classList.add(CLASS_SERVICES_SHOWING);
       } else {
-        // 마지막 슬라이드면 첫 번째로 이동
-        servicesFirstCard.classList.add(CLASS_SHOWING);
+        // 마지막 슬라이드면 첫 번째로 이동 (4)
+        servicesFirstCard.classList.add(CLASS_SERVICES_SHOWING);
       }
     } else {
       // null이라서 .showing을 첫 번째 슬라이드로 올림 (1)
-      servicesFirstCard.classList.add(CLASS_SHOWING);
+      servicesFirstCard.classList.add(CLASS_SERVICES_SHOWING);
     }
   }
 }
-slide();
+servicesSlide();
 
-setInterval(slide, 2000);
+setInterval(servicesSlide, 2000);
+
+// testimonials 슬라이더
+const testimonialsFirstCard = document.querySelector(
+  ".testimonials-card:first-child"
+);
+const CLASS_TESTIMONIALS_SHOWING = "testimonials__showing";
+
+function testimonialsSlide() {
+  const testimonialsCurrentSlide = document.querySelector(
+    `.${CLASS_TESTIMONIALS_SHOWING}`
+  );
+
+  if (window.innerWidth < 992) {
+    if (testimonialsCurrentSlide) {
+      testimonialsCurrentSlide.classList.remove(CLASS_TESTIMONIALS_SHOWING);
+      const testimonialsNextSlide = testimonialsCurrentSlide.nextElementSibling;
+
+      if (testimonialsNextSlide) {
+        testimonialsNextSlide.classList.add(CLASS_TESTIMONIALS_SHOWING);
+      } else {
+        testimonialsFirstCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
+      }
+    } else {
+      testimonialsFirstCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
+    }
+  }
+}
+testimonialsSlide();
+
+setInterval(testimonialsSlide, 2000);
