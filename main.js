@@ -17,29 +17,27 @@ const footer = document.querySelector(".footer");
 const landingHeight = landing.getBoundingClientRect().height;
 
 // Header
-const featuresBtnHeader = document.querySelector(".features-button__header");
-const servicesBtnHeader = document.querySelector(".services-button__header");
-const contactBtnHeader = document.querySelector(".contact-button__header");
-const faqBtnHeader = document.querySelector(".faq-button__header");
-const signInBtn = document.querySelector(".sign-in-btn");
+const headerAFeatrues = document.querySelector(".header-a__features");
+const headerAServices = document.querySelector(".header-a__services");
+const headerAContact = document.querySelector(".header-a__contact");
+const headerAFaq = document.querySelector(".header-a__faq");
+const menuBtn = document.querySelector(".menu-btn");
+const signinBtn = document.querySelector(".signin-btn");
 
 // Menu
-const closeBtn = document.querySelector(".close-button");
+const menuCloseBtn = document.querySelector(".menu-close-btn");
 const menuBtnFeatures = document.querySelector(".menu-btn__features");
 const menuBtnServices = document.querySelector(".menu-btn__services");
 const menuBtnContact = document.querySelector(".menu-btn__contact");
-const menuSignInBtn = document.querySelector(".menu-sign-in-btn");
+const menuSigninBtn = document.querySelector(".menu-signin-btn");
 
 // Landing
-const menuBtn = document.querySelector(".menu-button");
 
 // Footer
-const featuresBtnFooter = document.querySelector(".features-button__footer");
-const servicesBtnFooter = document.querySelector(".services-button__footer");
-const testimonialsBtnFooter = document.querySelector(
-  ".testimonials-button__footer"
-);
-const contactBtnFooter = document.querySelector(".contact-btn__footer");
+const footerAFeatures = document.querySelector(".footer-a__features");
+const footerAServices = document.querySelector(".footer-a__services");
+const footerATestimonials = document.querySelector(".footer-a__testimonials");
+const footerAContact = document.querySelector(".footer-a__contact");
 
 // Arrow-up
 const arrowBtn = document.querySelector(".arrow-btn");
@@ -48,40 +46,40 @@ const arrowDown = document.querySelector(".arrow-down");
 
 // Login-Modal
 const loginModal = document.querySelector(".login-modal");
-const loginModalClose = document.querySelector(".login-modal__close");
+const loginModalClose = document.querySelector(".login-modal-close");
 
 // header 섹션 버튼 클릭시 이동
-featuresBtnHeader.addEventListener("click", () => {
+headerAFeatrues.addEventListener("click", () => {
   features.scrollIntoView();
 });
 
-servicesBtnHeader.addEventListener("click", () => {
+headerAServices.addEventListener("click", () => {
   services.scrollIntoView();
 });
 
-contactBtnHeader.addEventListener("click", () => {
+headerAContact.addEventListener("click", () => {
   contact.scrollIntoView();
 });
 
-faqBtnHeader.addEventListener("click", () => {
+headerAFaq.addEventListener("click", () => {
   footer.scrollIntoView();
 });
 
 // footer 섹션 버튼 클릭시 이동
 
-featuresBtnFooter.addEventListener("click", () => {
+footerAFeatures.addEventListener("click", () => {
   features.scrollIntoView();
 });
 
-servicesBtnFooter.addEventListener("click", () => {
+footerAServices.addEventListener("click", () => {
   services.scrollIntoView();
 });
 
-testimonialsBtnFooter.addEventListener("click", () => {
+footerATestimonials.addEventListener("click", () => {
   testimonials.scrollIntoView();
 });
 
-contactBtnFooter.addEventListener("click", () => {
+footerAContact.addEventListener("click", () => {
   contact.scrollIntoView();
 });
 
@@ -91,7 +89,7 @@ menuBtn.addEventListener("click", () => {
   document.body.appendChild(bg);
 });
 
-closeBtn.addEventListener("click", () => {
+menuCloseBtn.addEventListener("click", () => {
   menu.classList.remove("active");
   document.body.removeChild(bg);
 });
@@ -117,7 +115,7 @@ menuBtnContact.addEventListener("click", () => {
   contact.scrollIntoView();
 });
 
-menuSignInBtn.addEventListener("click", () => {
+menuSigninBtn.addEventListener("click", () => {
   menu.classList.remove("active");
   loginModal.classList.add("active");
 });
@@ -204,7 +202,7 @@ testimonialsSlide();
 setInterval(testimonialsSlide, 2000);
 
 // Login-Modal 띄우기
-signInBtn.addEventListener("click", () => {
+signinBtn.addEventListener("click", () => {
   loginModal.classList.add("active");
   document.body.appendChild(bg);
 });

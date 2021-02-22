@@ -36,9 +36,9 @@
   line-height: 1.21;
 }
 
-/* .landing-button:first-child가 안 되서
-.landing-button이라는 class 만들어서 사용 */
-.landing-button {
+/* .landing-btn:first-child가 안 되서
+.landing-btn이라는 class 만들어서 사용 */
+.landing-btn {
   margin-right: 10px;
   background: linear-gradient(90deg, #3acf6e 70%, #1c57c9 30%);
 }
@@ -69,7 +69,7 @@
     line-height: 1.6;
   }
 
-  .landing-button {
+  .landing-btn {
     margin-right: 20px;
   }
 }
@@ -83,7 +83,7 @@
     background: linear-gradient(90deg, #1c57c9 72%, #fff 28%);
   }
 
-  .landing-image-box {
+  .landing-image {
     display: flex;
     justify-content: flex-end;
   }

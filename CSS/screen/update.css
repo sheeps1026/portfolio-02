@@ -9,33 +9,33 @@
   margin-bottom: 64px;
 }
 
-.update-image-group {
+.update-image {
   position: relative;
   margin-bottom: 64px;
   width: auto;
   height: 381px;
 }
 
-.update-image-group img {
+.update-image img {
   position: absolute;
   border-radius: 15px;
 }
 
-.update-image-group img:first-child {
+.update-image img:first-child {
   top: 0;
   left: 0;
   width: 45%;
   height: 35%;
 }
 
-.update-image-group img:nth-child(2) {
+.update-image img:nth-child(2) {
   top: 10%;
   right: 0;
   width: 50%;
   height: 60%;
 }
 
-.update-image-group img:last-child {
+.update-image img:last-child {
   bottom: 10%;
   left: 0;
   width: 60%;
@@ -58,7 +58,7 @@
   background-color: #fff;
 }
 
-.update-card-content strong {
+.update-card__content strong {
   display: block;
   margin-bottom: 15px;
   color: #fff;
@@ -67,7 +67,7 @@
   line-height: 1.21;
 }
 
-.update-card-content p {
+.update-card__content p {
   color: #fff;
   font-size: 13px;
   line-height: 1.5384;
@@ -79,22 +79,14 @@
     background: linear-gradient(360deg, #1c57c9 68%, #fff 32%);
   }
 
-  .update-image-group {
+  .update-image {
     height: 676px;
   }
 
-  .update-card-group__first,
-  .update-card-group__second {
+  .update-card-group {
     display: flex;
-    justify-content: space-between;
-  }
-
-  .update-card-group__first {
-    margin-bottom: 30px;
-  }
-
-  .update-card-group__second {
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .update-card {
@@ -113,31 +105,13 @@
     background: linear-gradient(270deg, #1c57c9 55%, #fff 45%);
   }
 
-  .update-category {
+  .update .category {
     padding-top: 48px;
   }
 
   .update .title {
     margin-bottom: 62px;
     line-height: 1.5238;
-  }
-
-  .update-image-group {
-    width: 75;
-  }
-
-  .update-card-group {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .update-card-group__first,
-  .update-card-group__second {
-    display: block;
-  }
-
-  .update-card-group__first {
-    margin-bottom: 0;
   }
 
   .update-card {
@@ -149,26 +123,18 @@
     width: 424px;
   }
 
-  .update-card-group__second .update-card:last-child {
-    margin-bottom: 0;
-  }
-
   .update-card img {
     margin-bottom: 0;
     margin-right: 31px;
   }
 
-  .update-card-content strong {
+  .update-card__content strong {
     margin-bottom: 11px;
     font-size: 18px;
   }
 
-  .update-card-content p {
+  .update-card__content p {
     font-size: 15px;
     line-height: 1.6;
-  }
-
-  .update-card-content strong {
-    margin-bottom: 11px;
   }
 }

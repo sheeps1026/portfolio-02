@@ -23,7 +23,7 @@
     />
     <link rel="stylesheet" href="./CSS/reset-style.css" />
     <link rel="stylesheet" href="./CSS/screen/header.css" />
-    <link rel="stylesheet" href="./CSS/screen/menu.css" />
+    <link rel="stylesheet" href="./CSS/modal/menu.css" />
     <link rel="stylesheet" href="./CSS/screen/landing.css" />
     <link rel="stylesheet" href="./CSS/screen/features.css" />
     <link rel="stylesheet" href="./CSS/screen/update.css" />
@@ -31,7 +31,8 @@
     <link rel="stylesheet" href="./CSS/screen/testimonials.css" />
     <link rel="stylesheet" href="./CSS/screen/conatact.css" />
     <link rel="stylesheet" href="./CSS/screen/footer.css" />
-    <link rel="stylesheet" href="./CSS/screen/login-modal.css" />
+    <link rel="stylesheet" href="./CSS/modal/arrow.css" />
+    <link rel="stylesheet" href="./CSS/modal/login-modal.css" />
     <link rel="stylesheet" href="./CSS/style.css" />
     <script src="main.js" defer></script>
   </head>
@@ -48,34 +49,32 @@
               <nav class="header-nav">
                 <ul class="header-links">
                   <li class="header-link">
-                    <a href="#" class="fill-button inverted">Home</a>
+                    <a href="#" class="fill-btn inverted">Home</a>
                   </li>
                   <li class="header-link">
-                    <a class="fill-button inverted features-button__header">
+                    <a class="header-a__features fill-btn inverted">
                       Features
                     </a>
                   </li>
                   <li class="header-link">
-                    <a class="fill-button inverted services-button__header">
+                    <a class="header-a__services fill-btn inverted">
                       Services
                     </a>
                   </li>
                   <li class="header-link">
-                    <a class="fill-button inverted contact-button__header">
-                      Contact
-                    </a>
+                    <a class="header-a__contact fill-btn inverted"> Contact </a>
                   </li>
                   <li class="header-link">
-                    <a class="fill-button inverted faq-button__header">FAQ</a>
+                    <a class="header-a__faq fill-btn inverted">FAQ</a>
                   </li>
                 </ul>
               </nav>
-              <button type="button" class="menu-button">Menu</button>
+              <button type="button" class="menu-btn">Menu</button>
               <div class="button-group">
-                <button type="button" class="sign-in-btn fill-button">
+                <button type="button" class="signin-btn fill-btn">
                   Sign In
                 </button>
-                <button type="button" class="fill-button">Get Started</button>
+                <button type="button" class="fill-btn">Get Started</button>
               </div>
             </div>
           </div>
@@ -89,7 +88,7 @@
           <div class="col-12">
             <header>
               <h1>Simhome Menu</h1>
-              <button type="button" class="close-button">Close</button>
+              <button type="button" class="menu-close-btn">Close</button>
             </header>
             <nav>
               <ul class="menu-links">
@@ -110,9 +109,9 @@
                 </li>
               </ul>
             </nav>
-            <div class="menu-button-group">
-              <button type="button" class="fill-button">Get Started</button>
-              <button type="button" class="menu-sign-in-btn fill-button">
+            <div class="menu-btn-group">
+              <button type="button" class="fill-btn">Get Started</button>
+              <button type="button" class="menu-signin-btn fill-btn">
                 Sign In
               </button>
             </div>
@@ -133,13 +132,13 @@
               Turn your home into a smarthome today with a simple & affordable
               upgrade. Discover the upgrade that automates home maintenance.
             </p>
-            <button type="button" class="landing-button fill-button">
+            <button type="button" class="landing-btn fill-btn">
               Get Started
             </button>
-            <button type="button" class="fill-button">Learn More</button>
+            <button type="button" class="fill-btn">Learn More</button>
           </div>
           <div class="col-12 col-md-12 col-lg-6">
-            <div class="landing-image-box">
+            <div class="landing-image">
               <img
                 src="./assets/image/landing/image-01.jpg"
                 alt="Living room"
@@ -160,7 +159,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <p class="features-desc__first">
+            <p class="features-desc">
               Every day your home faces countless potential threats. Every day
               you face countless potential headaches. A small problem can become
               a major disaster. Early warning signs exist but often you can't
@@ -175,16 +174,16 @@
                 src="./assets/image/features/image-01.png"
                 alt="Features image"
               />
-              <div class="features-image-desc features-image-desc__first">
+              <div class="features-image-desc">
                 <p>Does your home kow about hot water problem?</p>
               </div>
-              <div class="features-image-desc features-image-desc__second">
+              <div class="features-image-desc">
                 <p>Does your home know when a pipe is leaking?</p>
               </div>
-              <div class="features-image-desc features-image-desc__third">
+              <div class="features-image-desc">
                 <p>does it anticipate system issues from wear and tear?</p>
               </div>
-              <div class="features-image-desc features-image-desc__four">
+              <div class="features-image-desc">
                 <p>
                   Does it alert you to irregular system behaviors that threaten
                   your health and well-being?
@@ -193,64 +192,55 @@
             </div>
           </div>
           <div class="col-12 col-lg-7">
-            <div class="features-content">
-              <div class="features-card-content">
-                <strong class="category">FEATURES</strong>
-                <h2 class="title">Meet Siphome</h2>
-                <p class="features-desc">
-                  The most comprehensive smart solution to home maintenance. All
-                  it takes is a simple and affordable sensor installation by one
-                  of our Siphome certified technicians.
-                </p>
-                <div class="features-card-group">
-                  <div class="features-card-group__first">
-                    <div class="features-card">
-                      <img
-                        src="./assets/image/features/Siren.png"
-                        alt="Siren"
-                      />
-                      <strong>Automatic Threat Detection</strong>
-                      <p>
-                        Siphome reacts the moment your equipment fails, alerting
-                        you to the problem.
-                      </p>
-                    </div>
-                    <div class="features-card">
-                      <img
-                        src="./assets/image/features/Stethoscope.png"
-                        alt="Stethoscope"
-                      />
-                      <strong>Smart Diagnostics</strong>
-                      <p>
-                        See exactly what is malfunctioning and compare your
-                        maintenance options on the same screen.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="features-card-group__second">
-                    <div class="features-card">
-                      <img
-                        src="./assets/image/features/Prevention.png"
-                        alt="Prevention"
-                      />
-                      <strong>Disaster Prevention</strong>
-                      <p>
-                        Predictive analytics lets you see what needs maintenance
-                        before it fails.
-                      </p>
-                    </div>
-                    <div class="features-card">
-                      <img
-                        src="./assets/image/features/Service.png"
-                        alt="Service"
-                      />
-                      <strong>24/7 Service​</strong>
-                      <p>
-                        Siphome monitors your critical systems 24/7 so you can
-                        enjoy peace of mind.
-                      </p>
-                    </div>
-                  </div>
+            <div class="features-card-content">
+              <strong class="category">FEATURES</strong>
+              <h2 class="title">Meet Siphome</h2>
+              <p class="features-detail-desc">
+                The most comprehensive smart solution to home maintenance. All
+                it takes is a simple and affordable sensor installation by one
+                of our Siphome certified technicians.
+              </p>
+              <div class="features-card-group">
+                <div class="features-card">
+                  <img src="./assets/image/features/Siren.png" alt="Siren" />
+                  <strong>Automatic Threat Detection</strong>
+                  <p>
+                    Siphome reacts the moment your equipment fails, alerting you
+                    to the problem.
+                  </p>
+                </div>
+                <div class="features-card">
+                  <img
+                    src="./assets/image/features/Stethoscope.png"
+                    alt="Stethoscope"
+                  />
+                  <strong>Smart Diagnostics</strong>
+                  <p>
+                    See exactly what is malfunctioning and compare your
+                    maintenance options on the same screen.
+                  </p>
+                </div>
+                <div class="features-card">
+                  <img
+                    src="./assets/image/features/Prevention.png"
+                    alt="Prevention"
+                  />
+                  <strong>Disaster Prevention</strong>
+                  <p>
+                    Predictive analytics lets you see what needs maintenance
+                    before it fails.
+                  </p>
+                </div>
+                <div class="features-card">
+                  <img
+                    src="./assets/image/features/Service.png"
+                    alt="Service"
+                  />
+                  <strong>24/7 Service​</strong>
+                  <p>
+                    Siphome monitors your critical systems 24/7 so you can enjoy
+                    peace of mind.
+                  </p>
                 </div>
               </div>
             </div>
@@ -263,12 +253,12 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-lg-6">
-            <strong class="category update-category">UPDATE</strong>
+            <strong class="category">UPDATE</strong>
             <h2 class="title">
               It starts with an<br />
               upgrade
             </h2>
-            <div class="update-image-group">
+            <div class="update-image">
               <img src="./assets/image/update/Image-01.jpg" alt="Iamge 01" />
               <img src="./assets/image/update/Image-02.jpg" alt="Image 02" />
               <img src="./assets/image/update/Image-03.jpg" alt="Imgge 03" />
@@ -276,57 +266,53 @@
           </div>
           <div class="col-12 col-lg-6">
             <div class="update-card-group">
-              <div class="update-card-group__first">
-                <div class="update-card">
-                  <img src="./assets/image/update/Monitor.png" alt="Monitor" />
-                  <div class="update-card-content">
-                    <strong>Monitor</strong>
-                    <p>
-                      Make your standard systems smart with Siphome. A simple
-                      installation or integration and we can start to monitor
-                      24/7 to make sure your home is Siphome.
-                    </p>
-                  </div>
-                </div>
-                <div class="update-card">
-                  <img
-                    src="./assets/image/update/Maintenance.jpg"
-                    alt="Maintenance"
-                  />
-                  <div class="update-card-content">
-                    <strong>Maintenance</strong>
-                    <p>
-                      Siphome helps you maintain your home. The HomeHealth
-                      Record ensures you have the right information at the right
-                      time, and if you aren’t able to do the maintenance
-                      yourself, we can connect you to a service pro to help.
-                    </p>
-                  </div>
+              <div class="update-card">
+                <img src="./assets/image/update/Monitor.png" alt="Monitor" />
+                <div class="update-card__content">
+                  <strong>Monitor</strong>
+                  <p>
+                    Make your standard systems smart with Siphome. A simple
+                    installation or integration and we can start to monitor 24/7
+                    to make sure your home is Siphome.
+                  </p>
                 </div>
               </div>
-              <div class="update-card-group__second">
-                <div class="update-card">
-                  <img src="./assets/image/update/Repair.jpg" alt="Repair" />
-                  <div class="update-card-content">
-                    <strong>Repair</strong>
-                    <p>
-                      Siphome empowers you with smart notifications so you can
-                      make repairs before they become problems. Notifications
-                      provide diagnostics and recommended next actions so you
-                      know what to do and have the same information as your
-                      service pro.
-                    </p>
-                  </div>
+              <div class="update-card">
+                <img
+                  src="./assets/image/update/Maintenance.jpg"
+                  alt="Maintenance"
+                />
+                <div class="update-card__content">
+                  <strong>Maintenance</strong>
+                  <p>
+                    Siphome helps you maintain your home. The HomeHealth Record
+                    ensures you have the right information at the right time,
+                    and if you aren’t able to do the maintenance yourself, we
+                    can connect you to a service pro to help.
+                  </p>
                 </div>
-                <div class="update-card">
-                  <img src="./assets/image/update/Replace.png" alt="Replace" />
-                  <div class="update-card-content">
-                    <strong>Replace</strong>
-                    <p>
-                      Improve your home over time. Build your next-gen smart
-                      home with Siphome’s advice along the way.
-                    </p>
-                  </div>
+              </div>
+              <div class="update-card">
+                <img src="./assets/image/update/Repair.jpg" alt="Repair" />
+                <div class="update-card__content">
+                  <strong>Repair</strong>
+                  <p>
+                    Siphome empowers you with smart notifications so you can
+                    make repairs before they become problems. Notifications
+                    provide diagnostics and recommended next actions so you know
+                    what to do and have the same information as your service
+                    pro.
+                  </p>
+                </div>
+              </div>
+              <div class="update-card">
+                <img src="./assets/image/update/Replace.png" alt="Replace" />
+                <div class="update-card__content">
+                  <strong>Replace</strong>
+                  <p>
+                    Improve your home over time. Build your next-gen smart home
+                    with Siphome’s advice along the way.
+                  </p>
                 </div>
               </div>
             </div>
@@ -348,16 +334,16 @@
               </p>
               <div class="services-image-box">
                 <img src="./assets/image/services/Home.png" alt="Home" />
-                <p class="services-image-desc__1">SEWER LINE</p>
-                <p class="services-image-desc__2">DEHMIDIFIER</p>
-                <p class="services-image-desc__3">ROOF</p>
-                <p class="services-image-desc__4">SUMP PUMP</p>
-                <p class="services-image-desc__5">HOT WATER</p>
-                <p class="services-image-desc__6">HVAC</p>
-                <p class="services-image-desc__7">SOLAR</p>
-                <p class="services-image-desc__8">POOL</p>
-                <p class="services-image-desc__9">APPLIANCES</p>
-                <p class="services-image-desc__10">SEPTIC TANK</p>
+                <p>SEWER LINE</p>
+                <p>DEHMIDIFIER</p>
+                <p>ROOF</p>
+                <p>SUMP PUMP</p>
+                <p>HOT WATER</p>
+                <p>HVAC</p>
+                <p>SOLAR</p>
+                <p>POOL</p>
+                <p>APPLIANCES</p>
+                <p>SEPTIC TANK</p>
               </div>
               <div class="services-slider">
                 <div class="services-card">
@@ -526,7 +512,7 @@
                 rows="10"
               ></textarea>
             </div>
-            <button type="button" class="fill-button">Send Now</button>
+            <button type="button" class="fill-btn">Send Now</button>
           </div>
         </div>
       </div>
@@ -561,15 +547,13 @@
                         <a href="#">Home</a>
                       </li>
                       <li>
-                        <a class="features-button__footer"> Features </a>
+                        <a class="footer-a__features">Features</a>
                       </li>
                       <li>
-                        <a class="services-button__footer"> Services </a>
+                        <a class="footer-a__services">Services</a>
                       </li>
                       <li>
-                        <a class="testimonials-button__footer">
-                          Testimonials
-                        </a>
+                        <a class="footer-a__testimonials">Testimonials</a>
                       </li>
                       <li>
                         <a href="#">We Care</a>
@@ -585,7 +569,7 @@
                   <nav>
                     <ul>
                       <li>
-                        <a class="contact-btn__footer">Contact Us</a>
+                        <a class="footer-a__contact">Contact Us</a>
                       </li>
                       <li>
                         <a href="#">Privacy & Policy</a>
@@ -655,7 +639,7 @@
 
     <div class="login-modal">
       <h2>Sign In</h2>
-      <button class="login-modal__close" type="button">
+      <button class="login-modal-close" type="button">
         <i class="fas fa-times"></i>
       </button>
       <form action="" method="POST">
@@ -679,8 +663,11 @@
           <input id="login-modal__remember" type="checkbox" />
           <label for="login-modal__remember">Remember me</label>
         </div>
-        <button class="login-modal__submit" type="submit">Submit</button>
-        <p>Forgot <strong>password?</strong></p>
+        <button class="login-modal-submit" type="submit">Submit</button>
+        <p>
+          Forgot
+          <a href="#">password?</a>
+        </p>
       </form>
     </div>
   </body>

@@ -38,7 +38,7 @@
   display: none;
 }
 
-.menu-button {
+.menu-btn {
   padding: 10px 18px;
   border: 1px solid #fff;
   border-radius: 5px;
@@ -83,7 +83,7 @@
     padding: 10px 25px;
   }
 
-  .menu-button {
+  .menu-btn {
     display: none;
   }
 

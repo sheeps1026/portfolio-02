@@ -3,7 +3,7 @@
   margin-bottom: 162px;
 }
 
-.features-desc__first {
+.features-desc {
   margin-bottom: 60px;
   color: #606b86;
   font-size: 18px;
@@ -36,25 +36,27 @@
   transform: scale(1.1);
 }
 
-.features-image-desc__first {
+/* first-child는 적용이 안되고, nth-child(2)로 해야 first가 됨
+왜 이런지는 모르겠음 */
+.features-image-desc:nth-child(2) {
   top: 5%;
   right: 5%;
   border-bottom-left-radius: 0;
 }
 
-.features-image-desc__second {
+.features-image-desc:nth-child(3) {
   top: 25%;
   left: 5%;
   border-bottom-right-radius: 0;
 }
 
-.features-image-desc__third {
+.features-image-desc:nth-child(4) {
   bottom: 30%;
   left: 12%;
   border-top-right-radius: 0;
 }
 
-.features-image-desc__four {
+.features-image-desc:last-child {
   max-width: 160px;
   bottom: 8%;
   right: 5%;
@@ -72,7 +74,7 @@
   margin-bottom: 24px;
 }
 
-.features-desc {
+.features-detail-desc {
   margin-bottom: 52px;
   color: #606b86;
   font-size: 18px;
@@ -113,7 +115,7 @@
     margin-bottom: 197px;
   }
 
-  .features-desc__first {
+  .features-desc {
     margin-bottom: 64px;
     font-size: 20px;
     line-height: 1.6;
@@ -132,7 +134,7 @@
     max-width: 220px;
   }
 
-  .features-image-desc__four {
+  .features-image-desc:last-child {
     max-width: 250px;
     bottom: 0;
   }
@@ -142,18 +144,14 @@
     padding: 10px;
   }
 
-  .features-desc {
+  .features-detail-desc {
     margin-bottom: 64px;
   }
 
-  .features-card-group__first,
-  .features-card-group__second {
+  .features-card-group {
     display: flex;
-    justify-content: space-between;
-  }
-
-  .features-card-group__first {
-    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .features-card {
@@ -168,7 +166,7 @@
     margin-bottom: 227px;
     text-align: start;
   }
-  .features-desc__first {
+  .features-desc {
     max-width: 960px;
     margin-bottom: 131px;
   }
@@ -179,24 +177,16 @@
     height: 403px;
   }
 
-  .features-image-desc__second {
+  .features-image-desc:nth-child(3) {
     left: 0;
   }
 
-  .features-image-desc__third {
-    left: 4%;
-  }
-
-  .features-content {
-    display: flex;
-  }
-
-  .features-desc {
+  .features-detail-desc {
     margin-bottom: 51px;
   }
 
-  .features-card-group__first {
-    margin-bottom: 52px;
+  .features-card-group {
+    justify-content: flex-start;
   }
 
   .features-card {

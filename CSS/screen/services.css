@@ -51,52 +51,54 @@
   line-height: 1.21;
 }
 
-.services-image-desc__1 {
+/* 여기도 first-child가 nth-child(2)부터 됨
+왜 이럴까 */
+.services-image-box p:nth-child(2) {
   top: 0;
   left: 20%;
 }
 
-.services-image-desc__2 {
+.services-image-box p:nth-child(3) {
   top: 13%;
   left: 25%;
 }
 
-.services-image-desc__3 {
+.services-image-box p:nth-child(4) {
   top: 20%;
   right: 25%;
 }
 
-.services-image-desc__4 {
+.services-image-box p:nth-child(5) {
   top: 7%;
   right: 5%;
 }
 
-.services-image-desc__5 {
+.services-image-box p:nth-child(6) {
   top: 30%;
   left: 0%;
 }
 
-.services-image-desc__6 {
+.services-image-box p:nth-child(7) {
   top: 42%;
   right: 3%;
 }
 
-.services-image-desc__7 {
+.services-image-box p:nth-child(8) {
   bottom: 27%;
   left: 12%;
 }
 
-.services-image-desc__8 {
+.services-image-box p:nth-child(9) {
   bottom: 27%;
   right: 0;
 }
 
-.services-image-desc__9 {
+.services-image-box p:nth-child(10) {
   bottom: 3%;
   left: 25%;
 }
 
-.services-image-desc__10 {
+.services-image-box p:last-child {
   bottom: 17%;
   right: 20%;
 }
@@ -182,52 +184,52 @@
     margin-bottom: 196px;
   }
 
-  .services-image-desc__1 {
+  .services-image-box p:nth-child(2) {
     top: 5%;
     left: 30%;
   }
 
-  .services-image-desc__2 {
+  .services-image-box p:nth-child(3) {
     top: 18%;
     left: 38%;
   }
 
-  .services-image-desc__3 {
+  .services-image-box p:nth-child(4) {
     top: 20%;
     right: 33%;
   }
 
-  .services-image-desc__4 {
+  .services-image-box p:nth-child(5) {
     top: 7%;
     right: 25%;
   }
 
-  .services-image-desc__5 {
+  .services-image-box p:nth-child(6) {
     top: 38%;
     left: 20%;
   }
 
-  .services-image-desc__6 {
+  .services-image-box p:nth-child(7) {
     top: 42%;
     right: 20%;
   }
 
-  .services-image-desc__7 {
+  .services-image-box p:nth-child(8) {
     bottom: 30%;
     left: 20%;
   }
 
-  .services-image-desc__8 {
+  .services-image-box p:nth-child(9) {
     bottom: 27%;
     right: 23%;
   }
 
-  .services-image-desc__9 {
+  .services-image-box p:nth-child(10) {
     bottom: 7%;
     left: 37%;
   }
 
-  .services-image-desc__10 {
+  .services-image-box p:last-child {
     bottom: 15%;
     right: 35%;
   }

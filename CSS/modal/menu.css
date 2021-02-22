@@ -28,7 +28,7 @@
   line-height: 1.21;
 }
 
-.close-button {
+.menu-close-btn {
   padding: 10px 18px;
   border: 1px solid #fa4949;
   border-radius: 5px;
@@ -55,7 +55,7 @@
   font-weight: 600;
 }
 
-.menu-button-group button {
+.menu-btn-group button {
   width: 132px;
   height: 48px;
   border: none;
@@ -66,13 +66,13 @@
   line-height: 1.21;
 }
 
-.menu-button-group button:first-child {
+.menu-btn-group button:first-child {
   margin-right: 20px;
   color: #fff;
   background-color: #3acf6e;
 }
 
-.menu-button-group button:last-child {
+.menu-btn-group button:last-child {
   border: 1px solid #3acf6e;
   color: #3acf6e;
   background-color: #fff;
