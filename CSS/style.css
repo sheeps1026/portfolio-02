@@ -43,6 +43,10 @@ a:hover {
   cursor: pointer;
 }
 
+.sectioning-elements {
+  display: none;
+}
+
 .category {
   display: block;
   margin-bottom: 17px;
