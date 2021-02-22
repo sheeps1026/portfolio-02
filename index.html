@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./CSS/screen/testimonials.css" />
     <link rel="stylesheet" href="./CSS/screen/conatact.css" />
     <link rel="stylesheet" href="./CSS/screen/footer.css" />
+    <link rel="stylesheet" href="./CSS/screen/login-modal.css" />
     <link rel="stylesheet" href="./CSS/style.css" />
     <script src="main.js" defer></script>
   </head>
@@ -71,7 +72,9 @@
               </nav>
               <button type="button" class="menu-button">Menu</button>
               <div class="button-group">
-                <button type="button" class="fill-button">Sign In</button>
+                <button type="button" class="sign-in-btn fill-button">
+                  Sign In
+                </button>
                 <button type="button" class="fill-button">Get Started</button>
               </div>
             </div>
@@ -94,13 +97,13 @@
                   <a href="#">Home</a>
                 </li>
                 <li class="menu-link">
-                  <a href="#">Features</a>
+                  <a class="menu-btn__features">Features</a>
                 </li>
                 <li class="menu-link">
-                  <a href="#">Services</a>
+                  <a class="menu-btn__services">Services</a>
                 </li>
                 <li class="menu-link">
-                  <a href="#">Contact</a>
+                  <a class="menu-btn__contact">Contact</a>
                 </li>
                 <li class="menu-link">
                   <a href="#">FAQ</a>
@@ -109,7 +112,9 @@
             </nav>
             <div class="menu-button-group">
               <button type="button" class="fill-button">Get Started</button>
-              <button type="button" class="fill-button">Sign In</button>
+              <button type="button" class="menu-sign-in-btn fill-button">
+                Sign In
+              </button>
             </div>
           </div>
         </div>
@@ -553,7 +558,7 @@
                   <nav>
                     <ul>
                       <li>
-                        <a class="home-button__footer">Home</a>
+                        <a href="#">Home</a>
                       </li>
                       <li>
                         <a class="features-button__footer"> Features </a>
@@ -580,7 +585,7 @@
                   <nav>
                     <ul>
                       <li>
-                        <a href="#">Contact Us</a>
+                        <a class="contact-btn__footer">Contact Us</a>
                       </li>
                       <li>
                         <a href="#">Privacy & Policy</a>
@@ -646,6 +651,37 @@
       <button class="arrow-down">
         <i class="fas fa-arrow-down"></i>
       </button>
+    </div>
+
+    <div class="login-modal">
+      <h2>Sign In</h2>
+      <button class="login-modal__close" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+      <form action="" method="POST">
+        <div>
+          <label for="login-modal__email">Email address</label>
+          <input
+            id="login-modal__email"
+            type="email"
+            placeholder="Enter email"
+          />
+        </div>
+        <div>
+          <label for="login-modal__password">Password</label>
+          <input
+            id="login-modal__password"
+            type="password"
+            placeholder="Enter password"
+          />
+        </div>
+        <div>
+          <input id="login-modal__remember" type="checkbox" />
+          <label for="login-modal__remember">Remember me</label>
+        </div>
+        <button class="login-modal__submit" type="submit">Submit</button>
+        <p>Forgot <strong>password?</strong></p>
+      </form>
     </div>
   </body>
 </html>
