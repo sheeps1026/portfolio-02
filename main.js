@@ -1,6 +1,10 @@
 "use strict";
 
+// 모달창 나올 때 뒷배경 레이어
+const bg = document.createElement("div");
+
 // Section
+const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const menu = document.querySelector(".menu");
 const landing = document.querySelector(".landing");
@@ -17,25 +21,34 @@ const featuresBtnHeader = document.querySelector(".features-button__header");
 const servicesBtnHeader = document.querySelector(".services-button__header");
 const contactBtnHeader = document.querySelector(".contact-button__header");
 const faqBtnHeader = document.querySelector(".faq-button__header");
+const signInBtn = document.querySelector(".sign-in-btn");
 
 // Menu
 const closeBtn = document.querySelector(".close-button");
+const menuBtnFeatures = document.querySelector(".menu-btn__features");
+const menuBtnServices = document.querySelector(".menu-btn__services");
+const menuBtnContact = document.querySelector(".menu-btn__contact");
+const menuSignInBtn = document.querySelector(".menu-sign-in-btn");
 
 // Landing
 const menuBtn = document.querySelector(".menu-button");
 
 // Footer
-const homeBtnFooter = document.querySelector(".home-button__footer");
 const featuresBtnFooter = document.querySelector(".features-button__footer");
 const servicesBtnFooter = document.querySelector(".services-button__footer");
 const testimonialsBtnFooter = document.querySelector(
   ".testimonials-button__footer"
 );
+const contactBtnFooter = document.querySelector(".contact-btn__footer");
 
 // Arrow-up
 const arrowBtn = document.querySelector(".arrow-btn");
 const arrowUp = document.querySelector(".arrow-up");
 const arrowDown = document.querySelector(".arrow-down");
+
+// Login-Modal
+const loginModal = document.querySelector(".login-modal");
+const loginModalClose = document.querySelector(".login-modal__close");
 
 // header 섹션 버튼 클릭시 이동
 featuresBtnHeader.addEventListener("click", () => {
@@ -55,9 +68,6 @@ faqBtnHeader.addEventListener("click", () => {
 });
 
 // footer 섹션 버튼 클릭시 이동
-homeBtnFooter.addEventListener("click", () => {
-  header.scrollIntoView();
-});
 
 featuresBtnFooter.addEventListener("click", () => {
   features.scrollIntoView();
@@ -71,13 +81,45 @@ testimonialsBtnFooter.addEventListener("click", () => {
   testimonials.scrollIntoView();
 });
 
+contactBtnFooter.addEventListener("click", () => {
+  contact.scrollIntoView();
+});
+
 // 메뉴 버튼
 menuBtn.addEventListener("click", () => {
   menu.classList.add("active");
+  document.body.appendChild(bg);
 });
 
 closeBtn.addEventListener("click", () => {
   menu.classList.remove("active");
+  document.body.removeChild(bg);
+});
+
+bg.style.position = "fixed";
+bg.style.top = "0px";
+bg.style.left = "0px";
+bg.style.width = "100%";
+bg.style.height = "100%";
+bg.style.backgroundColor = "rgba(0, 0, 0, 0.4";
+bg.style.overflow = "auto";
+bg.style.zIndex = "98";
+
+menuBtnFeatures.addEventListener("click", () => {
+  features.scrollIntoView();
+});
+
+menuBtnServices.addEventListener("click", () => {
+  services.scrollIntoView();
+});
+
+menuBtnContact.addEventListener("click", () => {
+  contact.scrollIntoView();
+});
+
+menuSignInBtn.addEventListener("click", () => {
+  menu.classList.remove("active");
+  loginModal.classList.add("active");
 });
 
 // 스크롤 내렸을 때 arrow-btn 보이게
@@ -160,3 +202,14 @@ function testimonialsSlide() {
 testimonialsSlide();
 
 setInterval(testimonialsSlide, 2000);
+
+// Login-Modal 띄우기
+signInBtn.addEventListener("click", () => {
+  loginModal.classList.add("active");
+  document.body.appendChild(bg);
+});
+
+loginModalClose.addEventListener("click", () => {
+  loginModal.classList.remove("active");
+  document.body.removeChild(bg);
+});
