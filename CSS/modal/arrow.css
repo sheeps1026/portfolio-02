@@ -1,7 +1,7 @@
 .arrow-btn {
   display: flex;
-  flex-direction: column;
   position: fixed;
+  flex-direction: column;
   bottom: 40px;
   right: 40px;
   opacity: 0;
@@ -32,8 +32,8 @@
 
 .arrow-btn i {
   padding: 6px 2px;
-  opacity: 0.7;
   color: #606b86;
+  opacity: 0.7;
 }
 
 .arrow-btn i:hover {

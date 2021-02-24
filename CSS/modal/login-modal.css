@@ -1,8 +1,8 @@
 .login-modal {
   display: none;
+  position: fixed;
   flex-direction: column;
   align-items: center;
-  position: fixed;
   width: 450px;
   height: 410px;
   top: 50%;

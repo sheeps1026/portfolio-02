@@ -1,10 +1,10 @@
 .menu {
   display: none;
   position: absolute;
-  top: 0;
   text-align: center;
-  padding: 21px 0 42px;
+  top: 0;
   width: 100%;
+  padding: 21px 0 42px;
   background-color: #fff;
 }
 

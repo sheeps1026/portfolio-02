@@ -66,7 +66,6 @@ headerAFaq.addEventListener("click", () => {
 });
 
 // footer 섹션 버튼 클릭시 이동
-
 footerAFeatures.addEventListener("click", () => {
   features.scrollIntoView();
 });

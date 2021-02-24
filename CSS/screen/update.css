@@ -85,8 +85,8 @@
 
   .update-card-group {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .update-card {
@@ -117,10 +117,10 @@
   .update-card {
     flex-direction: row;
     align-items: flex-start;
+    width: 424px;
     margin-left: 99px;
     margin-bottom: 30px;
     padding: 13px 30px 16px 0;
-    width: 424px;
   }
 
   .update-card img {

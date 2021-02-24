@@ -48,9 +48,9 @@
 .contact button {
   display: block;
   padding: 10px 10px;
+  border: none;
   border-radius: 5px;
   color: #fff;
-  border: none;
   background-color: #3acf6e;
   font-size: 15px;
   font-weight: 700;
@@ -88,7 +88,7 @@
   }
 
   .contact-card {
-    margin: 0 auto 16px 0;
+    margin-left: 0;
   }
 
   .contact button {

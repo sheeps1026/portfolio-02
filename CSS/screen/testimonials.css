@@ -7,7 +7,9 @@
 }
 
 .testimonials-slider {
+  display: flex;
   position: relative;
+  justify-content: center;
 }
 
 .testimonials-card {
@@ -62,17 +64,12 @@
     margin-bottom: 116px;
   }
 
-  .testimonials-slider {
-    display: flex;
-    justify-content: center;
-  }
-
   .testimonials-card {
     display: block;
     text-align: start;
-    padding: 30px 110px 39px 30px;
     width: 540px;
     height: auto;
+    padding: 30px 110px 39px 30px;
   }
 
   .testimonials-card img {
@@ -110,8 +107,8 @@
 
 @media screen and (min-width: 992px) {
   .testimonials .title {
-    line-height: 1.5238;
     margin-bottom: 136px;
+    line-height: 1.5238;
   }
 
   .testimonials-slider {

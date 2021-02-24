@@ -40,9 +40,9 @@
   display: flex;
   align-items: center;
   position: absolute;
-  padding: 5px 9px;
   width: auto;
   height: 20px;
+  padding: 5px 9px;
   border: 0.5px solid #1ece7a;
   border-radius: 10px;
   color: #3bcf6e;
@@ -111,13 +111,13 @@
 /* postion: absolute, left: 50%, transform: translateX(-50%)를 해서 중앙 정렬 */
 .services-card {
   display: flex;
-  text-align: start;
   position: absolute;
+  text-align: start;
   align-items: center;
   left: 50%;
-  padding: 20px 24px;
   width: 315px;
   height: 96px;
+  padding: 20px 24px;
   border-radius: 16px;
   background-color: #fff;
   filter: drop-shadow(4px 4px 24px rgba(0, 0, 0, 0.08));
@@ -167,8 +167,8 @@
   }
 
   .services-image-box p {
-    padding: 11px 19px;
     height: 41px;
+    padding: 11px 19px;
     font-size: 15px;
   }
 }

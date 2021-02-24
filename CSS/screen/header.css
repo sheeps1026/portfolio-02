@@ -1,10 +1,10 @@
 .header {
   position: fixed;
-  z-index: 98;
   top: 0;
   width: 100%;
   padding: 21px 0;
   background-color: #1c57c9;
+  z-index: 98;
 }
 
 .header-content {
@@ -18,24 +18,11 @@
   align-items: center;
 }
 
-.logo-group span {
-  width: 42px;
-  height: 42px;
-  margin-right: 13px;
-  border-radius: 50%;
-  background-color: #1ece7a;
-}
-
 .header-title {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.21;
-}
-
-.header-nav,
-.button-group {
-  display: none;
 }
 
 .menu-btn {
@@ -49,6 +36,11 @@
   line-height: 1.21;
 }
 
+.header-content nav,
+.button-group {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
 }
 
@@ -57,7 +49,11 @@
     background: linear-gradient(90deg, #1c57c9 72%, #fff 28%);
   }
 
-  .header-nav,
+  .menu-btn {
+    display: none;
+  }
+
+  .header nav,
   .button-group {
     display: block;
   }
@@ -68,6 +64,8 @@
   }
 
   .header-link a {
+    height: 18px;
+    padding: 10px 25px;
     color: #fff;
   }
 
@@ -76,15 +74,6 @@
   .header-link:nth-child(4) a,
   .header-link:last-child a {
     opacity: 0.4;
-  }
-
-  .header-link a {
-    height: 18px;
-    padding: 10px 25px;
-  }
-
-  .menu-btn {
-    display: none;
   }
 
   .button-group button {

@@ -8,10 +8,10 @@
 
 .landing-title {
   margin-bottom: 36px;
+  color: #fff;
   font-size: 42px;
   font-weight: 700;
   line-height: 1.3095;
-  color: #fff;
 }
 
 .landing-title strong {
@@ -20,9 +20,9 @@
 
 .landing-desc {
   margin-bottom: 48px;
+  color: #fff;
   font-size: 18px;
   line-height: 1.5555;
-  color: #fff;
 }
 
 .landing button {
@@ -36,7 +36,7 @@
   line-height: 1.21;
 }
 
-/* .landing-btn:first-child가 안 되서
+/* .landing button:first-child가 안 되서
 .landing-btn이라는 class 만들어서 사용 */
 .landing-btn {
   margin-right: 10px;
@@ -48,7 +48,7 @@
   background-color: #1c57c9;
 }
 
-.landing img {
+.landing-image {
   display: none;
 }
 
@@ -93,23 +93,18 @@
     border-radius: 24px;
   }
 
-  .landing-image__first {
+  .landing img:first-child {
     width: auto;
     height: 540px;
     margin-right: 40px;
   }
 
-  /* .landing-image__second에서 border가 적용이 안 되어
-  last-child로 사용 */
   .landing img:last-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .landing-image__second {
     position: absolute;
     bottom: 0;
     width: auto;
     height: 256px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
