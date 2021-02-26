@@ -1,7 +1,7 @@
 "use strict";
 
 // 모달창 나올 때 뒷배경 레이어
-const bg = document.createElement("div");
+const modalOverlay = document.createElement("div");
 
 // Section
 const body = document.querySelector("body");
@@ -32,6 +32,19 @@ const menuBtnContact = document.querySelector(".menu-btn__contact");
 const menuSigninBtn = document.querySelector(".menu-signin-btn");
 
 // Landing
+
+// Services
+const servicesFirstCard = document.querySelector(".services-card:first-child");
+
+// Testimonials
+const testimonialsFirstCard = document.querySelector(
+  ".testimonials-card:first-child"
+);
+const testimonialsLastCard = document.querySelector(
+  ".testimonials-card:last-child"
+);
+const testimonialsBtnPrev = document.querySelector(".testimonials-button.prev");
+const testimonialsBtnNext = document.querySelector(".testimonials-button.next");
 
 // Footer
 const footerAFeatures = document.querySelector(".footer-a__features");
@@ -85,22 +98,22 @@ footerAContact.addEventListener("click", () => {
 // 메뉴 버튼
 menuBtn.addEventListener("click", () => {
   menu.classList.add("active");
-  document.body.appendChild(bg);
+  document.body.appendChild(modalOverlay);
 });
 
 menuCloseBtn.addEventListener("click", () => {
   menu.classList.remove("active");
-  document.body.removeChild(bg);
+  document.body.removeChild(modalOverlay);
 });
 
-bg.style.position = "fixed";
-bg.style.top = "0px";
-bg.style.left = "0px";
-bg.style.width = "100%";
-bg.style.height = "100%";
-bg.style.backgroundColor = "rgba(0, 0, 0, 0.4";
-bg.style.overflow = "auto";
-bg.style.zIndex = "98";
+modalOverlay.style.position = "fixed";
+modalOverlay.style.top = "0px";
+modalOverlay.style.left = "0px";
+modalOverlay.style.width = "100%";
+modalOverlay.style.height = "100%";
+modalOverlay.style.backgroundColor = "rgba(0, 0, 0, 0.4";
+modalOverlay.style.overflow = "auto";
+modalOverlay.style.zIndex = "98";
 
 menuBtnFeatures.addEventListener("click", () => {
   features.scrollIntoView();
@@ -137,25 +150,22 @@ arrowDown.addEventListener("click", () => {
 });
 
 // services 슬라이더
-const servicesFirstCard = document.querySelector(".services-card:first-child");
 const CLASS_SERVICES_SHOWING = "services__showing";
 
 // servicesFirstCard.classList.add(CLASS_SHOWING);
 
 function servicesSlide() {
-  const servicesCurrentSlide = document.querySelector(
-    `.${CLASS_SERVICES_SHOWING}`
-  );
+  const currentSlide = document.querySelector(`.${CLASS_SERVICES_SHOWING}`);
 
   if (window.innerWidth < 992) {
-    if (servicesCurrentSlide) {
+    if (currentSlide) {
       // servicesCurrentSlide를 찾으면 (2)
-      servicesCurrentSlide.classList.remove(CLASS_SERVICES_SHOWING);
-      const servicesNextSlide = servicesCurrentSlide.nextElementSibling;
+      currentSlide.classList.remove(CLASS_SERVICES_SHOWING);
+      const nextSlide = currentSlide.nextElementSibling;
 
-      if (servicesNextSlide) {
+      if (nextSlide) {
         // (3)
-        servicesNextSlide.classList.add(CLASS_SERVICES_SHOWING);
+        nextSlide.classList.add(CLASS_SERVICES_SHOWING);
       } else {
         // 마지막 슬라이드면 첫 번째로 이동 (4)
         servicesFirstCard.classList.add(CLASS_SERVICES_SHOWING);
@@ -171,23 +181,40 @@ servicesSlide();
 setInterval(servicesSlide, 2000);
 
 // testimonials 슬라이더
-const testimonialsFirstCard = document.querySelector(
-  ".testimonials-card:first-child"
-);
 const CLASS_TESTIMONIALS_SHOWING = "testimonials__showing";
 
-function testimonialsSlide() {
-  const testimonialsCurrentSlide = document.querySelector(
-    `.${CLASS_TESTIMONIALS_SHOWING}`
-  );
+function testimonialsLeftMove() {
+  const currentSlide = document.querySelector(`.${CLASS_TESTIMONIALS_SHOWING}`);
 
   if (window.innerWidth < 992) {
-    if (testimonialsCurrentSlide) {
-      testimonialsCurrentSlide.classList.remove(CLASS_TESTIMONIALS_SHOWING);
-      const testimonialsNextSlide = testimonialsCurrentSlide.nextElementSibling;
+    if (currentSlide) {
+      // 현재 showing 클래스가 있는 요소에 showing 클래스를 없앤다
+      currentSlide.classList.remove(CLASS_TESTIMONIALS_SHOWING);
+      // 현재 showing 클래스의 이전 요소를 변수에 담는다
+      const prevSlide = currentSlide.previousElementSibling;
 
-      if (testimonialsNextSlide) {
-        testimonialsNextSlide.classList.add(CLASS_TESTIMONIALS_SHOWING);
+      if (prevSlide) {
+        prevSlide.classList.add(CLASS_TESTIMONIALS_SHOWING);
+      } else {
+        // preSlide 변수에 담았던 이전 요소가 있을 시, 그 요소에 showing 클래스 부여
+        testimonialsLastCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
+      }
+    } else {
+      testimonialsLastCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
+    }
+  }
+}
+
+function testimonialsRightMove() {
+  const currentSlide = document.querySelector(`.${CLASS_TESTIMONIALS_SHOWING}`);
+
+  if (window.innerWidth < 992) {
+    if (currentSlide) {
+      currentSlide.classList.remove(CLASS_TESTIMONIALS_SHOWING);
+      const nextSlide = currentSlide.nextElementSibling;
+
+      if (nextSlide) {
+        nextSlide.classList.add(CLASS_TESTIMONIALS_SHOWING);
       } else {
         testimonialsFirstCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
       }
@@ -196,17 +223,19 @@ function testimonialsSlide() {
     }
   }
 }
-testimonialsSlide();
 
-setInterval(testimonialsSlide, 2000);
+testimonialsRightMove();
+
+testimonialsBtnPrev.addEventListener("click", testimonialsLeftMove);
+testimonialsBtnNext.addEventListener("click", testimonialsRightMove);
 
 // Login-Modal 띄우기
 signinBtn.addEventListener("click", () => {
   loginModal.classList.add("active");
-  document.body.appendChild(bg);
+  document.body.appendChild(modalOverlay);
 });
 
 loginModalClose.addEventListener("click", () => {
   loginModal.classList.remove("active");
-  document.body.removeChild(bg);
+  document.body.removeChild(modalOverlay);
 });
