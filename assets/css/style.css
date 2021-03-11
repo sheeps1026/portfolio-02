@@ -64,19 +64,19 @@ a:hover {
   line-height: 1.2103;
 }
 
-.fill-btn {
+.fill-button {
   transition: opacity 250ms ease-in-out;
 }
 
-.fill-btn:hover {
+.fill-button:hover {
   opacity: 0.5;
 }
 
-.fill-btn.inverted {
+.fill-button.inverted {
   transition: opacity 250ms ease-in-out;
 }
 
-.fill-btn.inverted:hover {
+.fill-button.inverted:hover {
   opacity: 1;
 }
 

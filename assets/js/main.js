@@ -22,14 +22,14 @@ const headerAServices = document.querySelector(".header-a__services");
 const headerAContact = document.querySelector(".header-a__contact");
 const headerAFaq = document.querySelector(".header-a__faq");
 const menuBtn = document.querySelector(".menu-btn");
-const signinBtn = document.querySelector(".signin-btn");
+const signinBtn = document.querySelector(".signin-button");
 
 // Menu
 const menuCloseBtn = document.querySelector(".menu-close-btn");
 const menuBtnFeatures = document.querySelector(".menu-btn__features");
 const menuBtnServices = document.querySelector(".menu-btn__services");
 const menuBtnContact = document.querySelector(".menu-btn__contact");
-const menuSigninBtn = document.querySelector(".menu-signin-btn");
+const menuSigninBtn = document.querySelector(".menu-signin-button");
 
 // Landing
 

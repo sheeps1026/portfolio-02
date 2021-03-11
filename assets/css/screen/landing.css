@@ -3,6 +3,7 @@
   margin: 84px 0 100px;
   padding: 60px 0 188px;
   border-bottom-right-radius: 80%;
+  border-radius: 0px 0px 200px 0px;
   background-color: #1c57c9;
 }
 
@@ -25,7 +26,7 @@
   line-height: 1.5555;
 }
 
-.landing button {
+.landing-button {
   width: 132px;
   height: 48px;
   border: none;
@@ -36,14 +37,12 @@
   line-height: 1.21;
 }
 
-/* .landing button:first-child가 안 되서
-.landing-btn이라는 class 만들어서 사용 */
-.landing-btn {
+.landing-button:nth-child(3) {
   margin-right: 10px;
   background: linear-gradient(90deg, #3acf6e 70%, #1c57c9 30%);
 }
 
-.landing button:last-child {
+.landing-button:last-child {
   border: 1px solid #fff;
   background-color: #1c57c9;
 }
@@ -69,7 +68,7 @@
     line-height: 1.6;
   }
 
-  .landing-btn {
+  .landing-button {
     margin-right: 20px;
   }
 }
@@ -80,7 +79,7 @@
     text-align: start;
     margin-bottom: 180px;
     padding-bottom: 160px;
-    background: linear-gradient(90deg, #1c57c9 72%, #fff 28%);
+    background: linear-gradient(90deg, #1c57c9 70%, #fff 30%);
   }
 
   .landing-image {
@@ -88,18 +87,17 @@
     justify-content: flex-end;
   }
 
-  .landing img {
-    display: block;
+  .landing-image img {
     border-radius: 24px;
   }
 
-  .landing img:first-child {
+  .landing-image img:first-child {
     width: auto;
     height: 540px;
     margin-right: 40px;
   }
 
-  .landing img:last-child {
+  .landing-image img:last-child {
     position: absolute;
     bottom: 0;
     width: auto;

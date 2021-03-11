@@ -19,6 +19,8 @@
 }
 
 .header-title {
+  margin: 0;
+  margin-left: 12px;
   color: #fff;
   font-size: 20px;
   font-weight: 700;
@@ -36,30 +38,31 @@
   line-height: 1.21;
 }
 
-.header-content nav,
-.button-group {
+.header-links {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+.header-button-group {
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
   .header {
-    background: linear-gradient(90deg, #1c57c9 72%, #fff 28%);
+    background: linear-gradient(90deg, #1c57c9 70%, #fff 30%);
   }
 
-  .menu-btn {
-    display: none;
+  .header-links {
+    display: block;
+    margin: 0;
   }
 
-  .header nav,
-  .button-group {
+  .header-button-group {
     display: block;
   }
 
   .header-links {
     display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -76,7 +79,11 @@
     opacity: 0.4;
   }
 
-  .button-group button {
+  .menu-btn {
+    display: none;
+  }
+
+  .header-button-group button {
     padding: 10px 20px;
     border: none;
     background-color: #fff;
@@ -85,12 +92,12 @@
     line-height: 1.21;
   }
 
-  .button-group button:first-child {
+  .header-button-group button:first-child {
     margin-right: 20px;
     color: #262b36;
   }
 
-  .button-group button:last-child {
+  .header-button-group button:last-child {
     color: #3acf6e;
   }
 }
