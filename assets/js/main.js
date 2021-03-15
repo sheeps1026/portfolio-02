@@ -1,5 +1,7 @@
 "use strict";
 
+let index = 0;
+
 // 모달창 나올 때 뒷배경 레이어
 const modalOverlay = document.createElement("div");
 
@@ -34,7 +36,9 @@ const menuSigninBtn = document.querySelector(".menu-signin-button");
 // Landing
 
 // Services
-const servicesFirstCard = document.querySelector(".services-card:first-child");
+const servicesCards = document.querySelectorAll(".services-card");
+
+const servicesIndicators = document.querySelectorAll(".services-indicator");
 
 // Testimonials
 const testimonialsFirstCard = document.querySelector(
@@ -150,35 +154,34 @@ arrowDown.addEventListener("click", () => {
 });
 
 // services 슬라이더
-const CLASS_SERVICES_SHOWING = "services__showing";
-
-// servicesFirstCard.classList.add(CLASS_SHOWING);
-
-function servicesSlide() {
-  const currentSlide = document.querySelector(`.${CLASS_SERVICES_SHOWING}`);
-
-  if (window.innerWidth < 992) {
-    if (currentSlide) {
-      // servicesCurrentSlide를 찾으면 (2)
-      currentSlide.classList.remove(CLASS_SERVICES_SHOWING);
-      const nextSlide = currentSlide.nextElementSibling;
-
-      if (nextSlide) {
-        // (3)
-        nextSlide.classList.add(CLASS_SERVICES_SHOWING);
-      } else {
-        // 마지막 슬라이드면 첫 번째로 이동 (4)
-        servicesFirstCard.classList.add(CLASS_SERVICES_SHOWING);
-      }
-    } else {
-      // null이라서 .showing을 첫 번째 슬라이드로 올림 (1)
-      servicesFirstCard.classList.add(CLASS_SERVICES_SHOWING);
-    }
+for (let i = 0; i < servicesCards.length; i++) {
+  if (servicesCards[i].classList.contains("showing")) {
+    index = i;
   }
 }
-servicesSlide();
 
-setInterval(servicesSlide, 2000);
+function navDots() {
+  let num;
+
+  for (let i = 0; i < servicesIndicators.length; i++) {
+    servicesCards[i].classList.remove("showing");
+    servicesIndicators[i].classList.remove("showing");
+  }
+
+  this.classList.add("showing");
+
+  for (let i = 0; i < servicesIndicators.length; i++) {
+    if (servicesIndicators[i].classList.contains("showing")) {
+      num = i;
+    }
+  }
+  servicesCards[num].classList.add("showing");
+  index = num;
+}
+
+servicesIndicators.forEach((e) => {
+  e.onclick = navDots;
+});
 
 // testimonials 슬라이더
 const CLASS_TESTIMONIALS_SHOWING = "testimonials__showing";
