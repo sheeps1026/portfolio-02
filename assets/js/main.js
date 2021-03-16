@@ -33,22 +33,23 @@ const menuBtnServices = document.querySelector(".menu-btn__services");
 const menuBtnContact = document.querySelector(".menu-btn__contact");
 const menuSigninBtn = document.querySelector(".menu-signin-button");
 
-// Landing
-
 // Services
 const servicesCards = document.querySelectorAll(".services-card");
 
 const servicesIndicators = document.querySelectorAll(".services-indicator");
 
 // Testimonials
-const testimonialsFirstCard = document.querySelector(
-  ".testimonials-card:first-child"
+const btnPrev = document.querySelector(".testimonials-button.prev");
+const btnNext = document.querySelector(".testimonials-button.next");
+
+const testimonialsCards = document.querySelectorAll(".testimonials-card");
+
+const firstCard = document.querySelector(".testimonials-card:first-child");
+const lastCard = document.querySelector(".testimonials-card:last-child");
+
+const testimonialsIndicators = document.querySelectorAll(
+  ".testimonials-indicator"
 );
-const testimonialsLastCard = document.querySelector(
-  ".testimonials-card:last-child"
-);
-const testimonialsBtnPrev = document.querySelector(".testimonials-button.prev");
-const testimonialsBtnNext = document.querySelector(".testimonials-button.next");
 
 // Footer
 const footerAFeatures = document.querySelector(".footer-a__features");
@@ -184,53 +185,63 @@ servicesIndicators.forEach((e) => {
 });
 
 // testimonials 슬라이더
-const CLASS_TESTIMONIALS_SHOWING = "testimonials__showing";
-
-function testimonialsLeftMove() {
-  const currentSlide = document.querySelector(`.${CLASS_TESTIMONIALS_SHOWING}`);
-
-  if (window.innerWidth < 992) {
-    if (currentSlide) {
-      // 현재 showing 클래스가 있는 요소에 showing 클래스를 없앤다
-      currentSlide.classList.remove(CLASS_TESTIMONIALS_SHOWING);
-      // 현재 showing 클래스의 이전 요소를 변수에 담는다
-      const prevSlide = currentSlide.previousElementSibling;
-
-      if (prevSlide) {
-        prevSlide.classList.add(CLASS_TESTIMONIALS_SHOWING);
-      } else {
-        // preSlide 변수에 담았던 이전 요소가 있을 시, 그 요소에 showing 클래스 부여
-        testimonialsLastCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
-      }
-    } else {
-      testimonialsLastCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
-    }
+for (let i = 0; i < testimonialsCards.length; i++) {
+  if (testimonialsCards[i].classList.contains("showing")) {
+    index = i;
   }
 }
 
-function testimonialsRightMove() {
-  const currentSlide = document.querySelector(`.${CLASS_TESTIMONIALS_SHOWING}`);
+function display() {
+  let num;
 
-  if (window.innerWidth < 992) {
-    if (currentSlide) {
-      currentSlide.classList.remove(CLASS_TESTIMONIALS_SHOWING);
-      const nextSlide = currentSlide.nextElementSibling;
+  for (let i = 0; i < testimonialsIndicators.length; i++) {
+    testimonialsCards[i].classList.remove("showing");
+    testimonialsIndicators[i].classList.remove("showing");
+  }
 
-      if (nextSlide) {
-        nextSlide.classList.add(CLASS_TESTIMONIALS_SHOWING);
-      } else {
-        testimonialsFirstCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
-      }
-    } else {
-      testimonialsFirstCard.classList.add(CLASS_TESTIMONIALS_SHOWING);
+  this.classList.add("showing");
+
+  for (let i = 0; i < testimonialsIndicators.length; i++) {
+    if (testimonialsIndicators[i].classList.contains("showing")) {
+      num = i;
     }
   }
+  testimonialsCards[num].classList.add("showing");
+  index = num;
 }
 
-testimonialsRightMove();
+function prevMove() {
+  testimonialsCards[index].classList.remove("showing");
+  testimonialsIndicators[index].classList.remove("showing");
+  index--;
 
-testimonialsBtnPrev.addEventListener("click", testimonialsLeftMove);
-testimonialsBtnNext.addEventListener("click", testimonialsRightMove);
+  if (index < 0) {
+    index = testimonialsCards.length - 1;
+  }
+
+  testimonialsIndicators[index].classList.add("showing");
+  testimonialsCards[index].classList.add("showing");
+}
+
+function nextMove() {
+  testimonialsCards[index].classList.remove("showing");
+  testimonialsIndicators[index].classList.remove("showing");
+  index++;
+
+  if (index == testimonialsCards.length) {
+    index = 0;
+  }
+
+  testimonialsIndicators[index].classList.add("showing");
+  testimonialsCards[index].classList.add("showing");
+}
+
+btnPrev.onclick = prevMove;
+btnNext.onclick = nextMove;
+
+testimonialsIndicators.forEach((e) => {
+  e.onclick = display;
+});
 
 // Login-Modal 띄우기
 signinBtn.addEventListener("click", () => {
