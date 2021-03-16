@@ -1,7 +1,9 @@
 .update {
+  position: relative;
   text-align: center;
+  margin-bottom: 168px;
   padding-bottom: 169px;
-  border-bottom-left-radius: 40%;
+  border-radius: 0px 0px 0px 200px;
   background: linear-gradient(360deg, #1c57c9 80%, #fff 20%);
 }
 
@@ -13,7 +15,7 @@
   position: relative;
   margin-bottom: 64px;
   width: auto;
-  height: 381px;
+  height: 380px;
 }
 
 .update-image img {
@@ -22,24 +24,24 @@
 }
 
 .update-image img:first-child {
-  top: 0;
-  left: 0;
-  width: 45%;
+  left: 0%;
+  top: 0%;
+  width: 44%;
   height: 35%;
 }
 
 .update-image img:nth-child(2) {
-  top: 10%;
-  right: 0;
-  width: 50%;
-  height: 60%;
+  right: 0%;
+  top: 17%;
+  width: 49%;
+  height: 64%;
 }
 
 .update-image img:last-child {
-  bottom: 10%;
-  left: 0;
-  width: 60%;
-  height: 50%;
+  left: 0%;
+  bottom: 0%;
+  width: 59%;
+  height: 59%;
 }
 
 .update-card {
@@ -50,15 +52,29 @@
   padding: 30px;
 }
 
-.update-card img {
-  margin-bottom: 24px;
-  width: auto;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #fff;
+.update-card:last-child {
+  margin-bottom: 0;
 }
 
-.update-card__content strong {
+.update-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.update-icon i {
+  color: #1c57c9;
+  font-size: 36px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.update-item strong {
   display: block;
   margin-bottom: 15px;
   color: #fff;
@@ -67,14 +83,52 @@
   line-height: 1.21;
 }
 
-.update-card__content p {
+.update-item p {
+  margin-bottom: 0;
   color: #fff;
   font-size: 13px;
   line-height: 1.5384;
 }
 
+.shape {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+}
+
+.shape:nth-child(2),
+.shape:nth-child(3) {
+  display: none;
+}
+
+.shape:last-child {
+  right: 0%;
+  bottom: 0%;
+}
+
+.shape div {
+  display: flex;
+  align-items: center;
+  height: 4px;
+  margin-bottom: 13px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  margin-right: 13px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.2;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
 @media screen and (min-width: 768px) {
   .update {
+    margin-bottom: 124px;
     padding-bottom: 156px;
     background: linear-gradient(360deg, #1c57c9 68%, #fff 32%);
   }
@@ -91,22 +145,21 @@
 
   .update-card {
     width: 315px;
-    height: auto;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
+  }
+
+  .update-card:nth-child(3),
+  .update-card:last-child {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 992px) {
   .update {
     text-align: start;
-    margin-bottom: 71px;
-    padding-bottom: 182px;
-    border-bottom-left-radius: 100%;
+    margin-bottom: 164px;
+    padding: 48px 0 182px;
     background: linear-gradient(270deg, #1c57c9 55%, #fff 45%);
-  }
-
-  .update .category {
-    padding-top: 48px;
   }
 
   .update .title {
@@ -114,27 +167,65 @@
     line-height: 1.5238;
   }
 
+  .update-image {
+    margin-bottom: 0;
+  }
+
+  .update-card-group {
+    margin-left: 99px;
+    justify-content: flex-start;
+    flex-wrap: no-wrap;
+  }
+
   .update-card {
     flex-direction: row;
     align-items: flex-start;
     width: 424px;
-    margin-left: 99px;
     margin-bottom: 30px;
-    padding: 13px 30px 16px 0;
   }
 
-  .update-card img {
-    margin-bottom: 0;
+  .update-card:nth-child(3) {
+    margin-bottom: 30px;
+  }
+
+  .update-icon {
+    max-width: 60px;
+    width: 100%;
     margin-right: 31px;
+    margin-bottom: 0;
   }
 
-  .update-card__content strong {
+  .update-item {
+    padding: 13px 0 16px 0;
+  }
+
+  .update-item strong {
     margin-bottom: 11px;
     font-size: 18px;
   }
 
-  .update-card__content p {
+  .update-item p {
     font-size: 15px;
     line-height: 1.6;
+  }
+
+  .shape:nth-child(2),
+  .shape:nth-child(3) {
+    display: block;
+  }
+
+  .shape:nth-child(2) {
+    left: 41.04%;
+    top: 18.97%;
+  }
+
+  .shape:nth-child(3) {
+    left: 12.5%;
+    top: 79.49%;
+  }
+
+  .shape:nth-child(2) .dot,
+  .shape:nth-child(3) .dot {
+    background-color: #262b35;
   }
 }
