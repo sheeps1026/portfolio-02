@@ -13,10 +13,15 @@
 }
 
 .features-image-box {
+  display: flex;
   position: relative;
-  margin-bottom: 58px;
-  width: auto;
+  justify-content: center;
+  align-items: center;
+  width: 275px;
   height: 275px;
+  margin: 0 auto 58px;
+  border-radius: 24px;
+  background-color: #f2f5f9;
 }
 
 .features-image-box img {
@@ -26,9 +31,13 @@
 
 .features-image-desc {
   position: absolute;
-  max-width: 130px;
+  text-align: start;
+  width: 130px;
   border-radius: 20px;
-  background-color: #f1f8e9;
+  color: #262b35;
+  background-color: #fff;
+  box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.08);
+  font-size: 10px;
   transition: transform 250ms ease-in-out;
 }
 
@@ -37,31 +46,31 @@
 }
 
 .features-image-desc:nth-child(2) {
-  top: 5%;
   right: 5%;
+  top: 10%;
   border-bottom-left-radius: 0;
 }
 
 .features-image-desc:nth-child(3) {
-  top: 25%;
   left: 5%;
+  top: 30%;
   border-bottom-right-radius: 0;
 }
 
 .features-image-desc:nth-child(4) {
-  bottom: 30%;
-  left: 12%;
+  left: 5%;
+  bottom: 22%;
   border-top-right-radius: 0;
 }
 
 .features-image-desc:last-child {
-  max-width: 160px;
-  bottom: 8%;
   right: 5%;
+  bottom: 0%;
+  width: 160px;
   border-top-left-radius: 0;
 }
 
-.features-image-desc p {
+.features-image-desc {
   text-align: start;
   padding: 5px;
   color: #262b36;
@@ -74,7 +83,7 @@
 }
 
 .features-detail-desc {
-  margin-bottom: 52px;
+  margin-bottom: 48px;
   color: #606b86;
   font-size: 18px;
   line-height: 1.5555;
@@ -84,16 +93,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
   margin-bottom: 24px;
-  padding: 30px 0 43px;
+  padding: 30px 20px 43px;
 }
 
-.features-card img {
-  display: block;
+.features-card:last-child {
+  margin-bottom: 0;
+}
+
+.features-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 55px;
   height: 55px;
   margin-bottom: 24px;
+  border-radius: 24px;
+  background-color: #fcf3f4;
+}
+
+.features-card i {
+  font-size: 36px;
+}
+
+.features-card:first-child i {
+  color: #fa4949;
+}
+
+.features-card:nth-child(2) i {
+  color: #2e80dd;
+}
+
+.features-card:nth-child(3) i {
+  color: #3acf6e;
+}
+
+.features-card:last-child i {
+  color: #d39100;
 }
 
 .features-card strong {
@@ -105,6 +141,7 @@
 }
 
 .features-card p {
+  margin-bottom: 0;
   color: #606b86;
   font-size: 13px;
   line-height: 1.5384;
@@ -122,8 +159,9 @@
   }
 
   .features-image-box {
+    width: 457px;
+    height: 457px;
     margin-bottom: 78px;
-    height: 390px;
   }
 
   .features-image-box img {
@@ -131,17 +169,13 @@
   }
 
   .features-image-desc {
-    max-width: 220px;
+    width: 210px;
+    font-size: 15px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
   }
 
   .features-image-desc:last-child {
-    bottom: 0;
-    max-width: 250px;
-  }
-
-  .features-image-desc p {
-    padding: 10px;
-    font-size: 15px;
+    width: 240px;
   }
 
   .features-detail-desc {
@@ -155,6 +189,16 @@
   }
 
   .features-card {
+    width: 315px;
+    margin: 0 20px 40px 0;
+  }
+
+  .features-card:nth-child(2),
+  .features-card:last-child {
+    margin-right: 0px;
+  }
+
+  .features-card:nth-child(3) {
     margin-bottom: 0px;
   }
 }
@@ -162,24 +206,22 @@
 @media screen and (min-width: 992px) {
   .features {
     text-align: start;
-    margin-bottom: 227px;
+    margin-bottom: 231px;
   }
   .features-desc {
-    max-width: 960px;
+    width: 960px;
     margin-bottom: 131px;
   }
 
   .features-image-box {
-    display: flex;
-    justify-content: center;
-    height: 403px;
-  }
-
-  .features-image-desc:nth-child(3) {
-    left: 0;
+    max-width: 457px;
+    max-height: 457px;
+    margin: 0;
+    width: auto;
   }
 
   .features-detail-desc {
+    max-width: 600px;
     margin-bottom: 51px;
   }
 
@@ -189,8 +231,9 @@
 
   .features-card {
     align-items: flex-start;
-    max-width: 324px;
-    margin: 0;
+    max-width: 268px;
+    width: auto;
+    margin: 0 0 36px 0;
     padding: 16px 23px 16px 0;
   }
 
@@ -205,5 +248,17 @@
   .features-card p {
     font-size: 15px;
     line-height: 1.6;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-card {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .features-card {
+    max-width: 324px;
   }
 }
