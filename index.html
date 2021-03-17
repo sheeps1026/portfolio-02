@@ -703,42 +703,48 @@
             <h2 class="title">
               Skip logging in, get what you need with a few key details
             </h2>
-            <img
-              src="./assets/images/contact/Image-01.png"
-              alt="Contact image"
-            />
+            <div class="contact-image">
+              <img
+                src="./assets/images/contact/question-mark.png"
+                alt="Question mark"
+              />
+            </div>
           </div>
           <div class="col-12 col-lg-6">
             <div class="contact-card">
-              <label for="conatact__name">Your name (required)</label>
-              <input type="text" id="contact__name" />
+              <label for="conatactName">Your name (required)</label>
+              <input type="text" id="contactName" placeholder="ㅤ" />
             </div>
             <div class="contact-card">
-              <label for="contact__email">Your email (required)</label>
-              <input type="email" id="contact__email" />
+              <label for="contactEmail">Your email (required)</label>
+              <input type="email" id="contactEmail" placeholder="ㅤ" />
             </div>
             <div class="contact-card">
-              <label for="conatact__subject">Subject (required)</label>
-              <input type="text" id="contact__subject" />
+              <label for="conatactSubject">Subject (required)</label>
+              <input type="text" id="contactSubject" placeholder="ㅤ" />
             </div>
             <div class="contact-card">
-              <label for="conatact__jobdesk">Jobdesk</label>
-              <input type="text" id="contact__jobdesk" />
+              <label for="conatactJobdesk">Jobdesk</label>
+              <input type="text" id="contactJobdesk" placeholder="ㅤ" />
+              <i class="fas fa-chevron-down"></i>
             </div>
             <div class="contact-card">
-              <label for="conatact__company">Company name</label>
-              <input type="text" id="contact__company" />
+              <label for="conatactCompany">Company name</label>
+              <input type="text" id="contactCompany" placeholder="ㅤ" />
             </div>
-            <div class="contact-card contact-card__message">
-              <label for="conatact__message">Message</label>
+            <div class="contact-card contact-message">
+              <label for="conatactMessage">Message</label>
               <textarea
                 name=""
-                id="conatact__message"
+                id="conatactMessage"
                 cols="30"
                 rows="10"
+                placeholder="ㅤ"
               ></textarea>
             </div>
-            <button type="button" class="fill-button">Send Now</button>
+            <button type="button" class="contact-button fill-button">
+              Send Now
+            </button>
           </div>
         </div>
       </div>

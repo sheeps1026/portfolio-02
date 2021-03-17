@@ -7,19 +7,25 @@
   margin-bottom: 64px;
 }
 
-.contact img {
-  width: auto;
-  height: 272px;
-  margin-bottom: 64px;
+.contact-image {
+  position: relative;
+  width: 83%;
+  margin: 0 auto 64px;
+}
+
+.contact-image img {
+  width: 83%;
+  height: auto;
 }
 
 .contact-card {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  width: 83%;
+  margin: 0 auto 16px;
 }
 
-.contact-card__message {
+.contact-message {
   margin-bottom: 36px;
 }
 
@@ -31,22 +37,46 @@
   line-height: 1.6;
 }
 
-.contact input,
-.contact textarea {
+.contact-card input,
+.contact-card textarea {
+  padding-left: 10px;
   border: 1px solid #cccccc;
   border-radius: 3px;
 }
 
-.contact input {
+.contact-card input {
   height: 48px;
 }
 
-.contact textarea {
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  background-color: #cccccc;
+  width: 30%;
+}
+
+.contact-card:nth-child(4) input::placeholder {
+  background-color: #262b36;
+}
+
+.contact-card textarea {
+  padding-top: 10px;
   height: 120px;
 }
 
-.contact button {
+.contact-card:nth-child(4) {
+  position: relative;
+}
+
+.contact-card:nth-child(4) i {
+  position: absolute;
+  right: 5%;
+  top: 63%;
+  cursor: pointer;
+}
+
+.contact-button {
   display: block;
+  margin-left: 8.5%;
   padding: 10px 10px;
   border: none;
   border-radius: 5px;
@@ -63,35 +93,50 @@
     margin-bottom: 248px;
   }
 
-  .contact img {
-    height: 362px;
+  .contact-image {
+    width: 46%;
+    margin: 0 auto 64px;
+  }
+
+  .contact-image img {
+    height: 46%;
   }
 
   .contact-card {
-    width: 60%;
+    width: 46%;
     margin: 0 auto 16px;
   }
 
-  .contact button {
-    margin: 0 20%;
+  .contact-button {
+    margin-left: 27%;
   }
 }
 
 @media screen and (min-width: 992px) {
   .contact {
     text-align: start;
-    margin-bottom: 248px;
+    margin-bottom: 285px;
   }
 
   .contact .title {
     max-width: 420px;
   }
 
+  .contact-image {
+    width: 412px;
+    margin: 0;
+  }
+
+  .contact-image img {
+    width: 412px;
+  }
+
   .contact-card {
+    width: 386px;
     margin-left: 0;
   }
 
-  .contact button {
+  .contact-button {
     margin: 0;
     padding: 15px 37px;
     background: linear-gradient(90deg, #3acf6e 70%, #fff 30%);
