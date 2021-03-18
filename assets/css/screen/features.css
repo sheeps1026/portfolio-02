@@ -4,7 +4,7 @@
 }
 
 .features-desc {
-  margin-bottom: 60px;
+  margin-bottom: 64px;
   color: #606b86;
   font-style: italic;
   font-size: 18px;
@@ -12,7 +12,7 @@
   line-height: 1.7777;
 }
 
-.features-image-box {
+.features-image {
   display: flex;
   position: relative;
   justify-content: center;
@@ -20,20 +20,19 @@
   width: 275px;
   height: 275px;
   margin: 0 auto 58px;
-  border-radius: 24px;
-  background-color: #f2f5f9;
 }
 
-.features-image-box img {
-  width: auto;
-  height: 189px;
+.features-image img {
+  width: 100%;
+  height: 100%;
 }
 
-.features-image-desc {
+.features-bubble {
   position: absolute;
   text-align: start;
-  width: 130px;
-  border-radius: 20px;
+  width: 140px;
+  padding: 5px;
+  border-radius: 5px;
   color: #262b35;
   background-color: #fff;
   box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.08);
@@ -41,41 +40,77 @@
   transition: transform 250ms ease-in-out;
 }
 
-.features-image-desc:hover {
+.features-bubble:hover {
   transform: scale(1.1);
 }
 
-.features-image-desc:nth-child(2) {
-  right: 5%;
-  top: 10%;
+/* common */
+.features-bubble:after {
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-width: 10px;
+}
+
+/* bottom */
+.features-bubble:nth-child(2):after,
+.features-bubble:nth-child(3):after {
+  top: 100%;
+  left: 50%;
+  border-top-color: #fff;
+}
+
+/* top */
+.features-bubble:nth-child(4):after,
+.features-bubble:last-child:after {
+  bottom: 100%;
+  left: 50%;
+  border-bottom-color: #fff;
+}
+
+.features-bubble:nth-child(2) {
+  right: 0%;
+  top: 15%;
   border-bottom-left-radius: 0;
 }
 
-.features-image-desc:nth-child(3) {
-  left: 5%;
+.features-bubble:nth-child(2):after {
+  margin-left: -20%;
+}
+
+.features-bubble:nth-child(3) {
+  left: 0%;
   top: 30%;
   border-bottom-right-radius: 0;
 }
 
-.features-image-desc:nth-child(4) {
+.features-bubble:nth-child(3):after {
+  margin-left: 23%;
+}
+
+.features-bubble:nth-child(4) {
   left: 5%;
   bottom: 22%;
   border-top-right-radius: 0;
 }
 
-.features-image-desc:last-child {
+.features-bubble:nth-child(4):after {
+  margin-left: 20%;
+}
+
+.features-bubble:last-child {
   right: 5%;
   bottom: 0%;
   width: 160px;
   border-top-left-radius: 0;
 }
 
-.features-image-desc {
-  text-align: start;
-  padding: 5px;
-  color: #262b36;
-  font-size: 10px;
-  line-height: 1.21;
+.features-bubble:last-child:after {
+  margin-left: -10%;
 }
 
 .features .title {
@@ -83,7 +118,8 @@
 }
 
 .features-detail-desc {
-  margin-bottom: 48px;
+  width: 74%;
+  margin: 0 auto 48px;
   color: #606b86;
   font-size: 18px;
   line-height: 1.5555;
@@ -93,8 +129,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 24px;
-  padding: 30px 20px 43px;
+  width: 74%;
+  margin: 0 auto 24px;
+  padding: 30px 0 43px;
 }
 
 .features-card:last-child {
@@ -149,6 +186,7 @@
 
 @media screen and (min-width: 768px) {
   .features {
+    position: relative;
     margin-bottom: 197px;
   }
 
@@ -158,24 +196,52 @@
     line-height: 1.6;
   }
 
-  .features-image-box {
+  .features .shape {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 140px;
+    height: 140px;
+  }
+
+  .features .shape div {
+    display: flex;
+    align-items: center;
+    height: 4px;
+    margin-bottom: 13px;
+  }
+
+  .features .dot {
+    width: 4px;
+    height: 4px;
+    margin-right: 13px;
+    border-radius: 50%;
+    background-color: #262b35;
+    opacity: 0.4;
+  }
+
+  .features .dot:last-child {
+    margin-right: 0;
+  }
+
+  .features-image {
     width: 457px;
     height: 457px;
     margin-bottom: 78px;
   }
 
-  .features-image-box img {
-    height: 314px;
-  }
-
-  .features-image-desc {
+  .features-bubble {
     width: 210px;
     font-size: 15px;
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
   }
 
-  .features-image-desc:last-child {
+  .features-bubble:last-child {
     width: 240px;
+  }
+
+  .features-bubble:after {
+    border-width: 17px;
   }
 
   .features-detail-desc {
@@ -191,6 +257,7 @@
   .features-card {
     width: 315px;
     margin: 0 20px 40px 0;
+    padding: 30px 20px 43px;
   }
 
   .features-card:nth-child(2),
@@ -213,15 +280,28 @@
     margin-bottom: 131px;
   }
 
-  .features-image-box {
+  .features .shape {
+    top: 3%;
+    margin-right: 1%;
+    transform: rotate(90deg);
+  }
+
+  .features-bubble:after {
+    border-width: 17px;
+  }
+
+  .features-image {
     max-width: 457px;
     max-height: 457px;
     margin: 0;
     width: auto;
+    height: auto;
   }
 
   .features-detail-desc {
     max-width: 600px;
+    width: auto;
+    margin-left: 0;
     margin-bottom: 51px;
   }
 
