@@ -1,6 +1,7 @@
 "use strict";
 
 let index = 0;
+let index2 = 0;
 
 // 모달창 나올 때 뒷배경 레이어
 const modalOverlay = document.createElement("div");
@@ -187,7 +188,7 @@ servicesIndicators.forEach((e) => {
 // testimonials 슬라이더
 for (let i = 0; i < testimonialsCards.length; i++) {
   if (testimonialsCards[i].classList.contains("showing")) {
-    index = i;
+    index2 = i;
   }
 }
 
@@ -207,33 +208,33 @@ function display() {
     }
   }
   testimonialsCards[num].classList.add("showing");
-  index = num;
+  index2 = num;
 }
 
 function prevMove() {
-  testimonialsCards[index].classList.remove("showing");
-  testimonialsIndicators[index].classList.remove("showing");
-  index--;
+  testimonialsCards[index2].classList.remove("showing");
+  testimonialsIndicators[index2].classList.remove("showing");
+  index2--;
 
-  if (index < 0) {
-    index = testimonialsCards.length - 1;
+  if (index2 < 0) {
+    index2 = testimonialsCards.length - 1;
   }
 
-  testimonialsIndicators[index].classList.add("showing");
-  testimonialsCards[index].classList.add("showing");
+  testimonialsIndicators[index2].classList.add("showing");
+  testimonialsCards[index2].classList.add("showing");
 }
 
 function nextMove() {
-  testimonialsCards[index].classList.remove("showing");
-  testimonialsIndicators[index].classList.remove("showing");
-  index++;
+  testimonialsCards[index2].classList.remove("showing");
+  testimonialsIndicators[index2].classList.remove("showing");
+  index2++;
 
-  if (index == testimonialsCards.length) {
-    index = 0;
+  if (index2 == testimonialsCards.length) {
+    index2 = 0;
   }
 
-  testimonialsIndicators[index].classList.add("showing");
-  testimonialsCards[index].classList.add("showing");
+  testimonialsIndicators[index2].classList.add("showing");
+  testimonialsCards[index2].classList.add("showing");
 }
 
 btnPrev.onclick = prevMove;
