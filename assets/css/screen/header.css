@@ -1,19 +1,24 @@
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 21px 0;
+.landing {
+  position: relative;
+  text-align: center;
+  margin-bottom: 100px;
+  padding-bottom: 188px;
+  border-radius: 0px 0px 200px 0px;
   background-color: #1c57c9;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 60px;
+  padding: 21px 0;
+  justify-content: space-between;
+  align-items: center;
   z-index: 98;
 }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-group {
+.header-logo {
   display: flex;
   align-items: center;
 }
@@ -46,9 +51,48 @@
   display: none;
 }
 
+.circle {
+  position: absolute;
+  left: 60%;
+  top: -40%;
+  width: 746px;
+  height: 746px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  opacity: 0.1;
+  z-index: -2;
+}
+
+@media screen and (min-width: 768px) {
+  .landing {
+    margin-bottom: 90px;
+    padding-bottom: 118px;
+  }
+
+  .circle {
+    left: 65%;
+    top: -50%;
+  }
+}
+
 @media screen and (min-width: 992px) {
-  .header {
-    background: linear-gradient(90deg, #1c57c9 70%, #fff 30%);
+  .landing {
+    text-align: start;
+    margin-bottom: 177px;
+    padding-bottom: 163px;
+
+    background-color: #fff;
+  }
+
+  .landing::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 72%;
+    height: 100%;
+    background-color: #1c57c9;
+    border-radius: 0px 0px 600px 0px;
+    z-index: -1;
   }
 
   .header-links {
@@ -99,5 +143,10 @@
 
   .header-button-group button:last-child {
     color: #3acf6e;
+  }
+
+  .circle {
+    left: 57%;
+    top: -35%;
   }
 }
