@@ -20,18 +20,19 @@ const footer = document.querySelector(".footer");
 const landingHeight = landing.getBoundingClientRect().height;
 
 // Header
-const headerAFeatrues = document.querySelector(".header-a__features");
-const headerAServices = document.querySelector(".header-a__services");
-const headerAContact = document.querySelector(".header-a__contact");
-const headerAFaq = document.querySelector(".header-a__faq");
+const headerAFeatrues = document.querySelector(".header-button__features");
+const headerAServices = document.querySelector(".header-button__services");
+const headerAContact = document.querySelector(".header-button__contact");
+const headerAFaq = document.querySelector(".header-button__faq");
 const menuBtn = document.querySelector(".menu-btn");
 const signinBtn = document.querySelector(".signin-button");
 
 // Menu
-const menuCloseBtn = document.querySelector(".menu-close-btn");
-const menuBtnFeatures = document.querySelector(".menu-btn__features");
-const menuBtnServices = document.querySelector(".menu-btn__services");
-const menuBtnContact = document.querySelector(".menu-btn__contact");
+const menuCloseBtn = document.querySelector(".menu-close-button");
+const menuBtnFeatures = document.querySelector(".menu-button__features");
+const menuBtnServices = document.querySelector(".menu-button__services");
+const menuBtnContact = document.querySelector(".menu-button__contact");
+const menuBtnFaq = document.querySelector(".menu-button__faq");
 const menuSigninBtn = document.querySelector(".menu-signin-button");
 
 // Services
@@ -53,10 +54,12 @@ const testimonialsIndicators = document.querySelectorAll(
 );
 
 // Footer
-const footerAFeatures = document.querySelector(".footer-a__features");
-const footerAServices = document.querySelector(".footer-a__services");
-const footerATestimonials = document.querySelector(".footer-a__testimonials");
-const footerAContact = document.querySelector(".footer-a__contact");
+const footerAFeatures = document.querySelector(".footer-button__features");
+const footerAServices = document.querySelector(".footer-button__services");
+const footerATestimonials = document.querySelector(
+  ".footer-button__testimonials"
+);
+const footerAContact = document.querySelector(".footer-button__contact");
 
 // Arrow-up
 const arrowBtn = document.querySelector(".arrow-btn");
@@ -67,37 +70,44 @@ const arrowDown = document.querySelector(".arrow-down");
 const loginModal = document.querySelector(".login-modal");
 const loginModalClose = document.querySelector(".login-modal-close");
 
-// header 섹션 버튼 클릭시 이동
-headerAFeatrues.addEventListener("click", () => {
+// scrollIntoView
+headerAFeatrues.addEventListener("click", (event) => {
+  event.preventDefault();
   features.scrollIntoView();
 });
 
-headerAServices.addEventListener("click", () => {
+headerAServices.addEventListener("click", (event) => {
+  event.preventDefault();
   services.scrollIntoView();
 });
 
-headerAContact.addEventListener("click", () => {
+headerAContact.addEventListener("click", (event) => {
+  event.preventDefault();
   contact.scrollIntoView();
 });
 
-headerAFaq.addEventListener("click", () => {
+headerAFaq.addEventListener("click", (event) => {
+  event.preventDefault();
   footer.scrollIntoView();
 });
 
-// footer 섹션 버튼 클릭시 이동
-footerAFeatures.addEventListener("click", () => {
+footerAFeatures.addEventListener("click", (event) => {
+  event.preventDefault();
   features.scrollIntoView();
 });
 
-footerAServices.addEventListener("click", () => {
+footerAServices.addEventListener("click", (event) => {
+  event.preventDefault();
   services.scrollIntoView();
 });
 
-footerATestimonials.addEventListener("click", () => {
+footerATestimonials.addEventListener("click", (event) => {
+  event.preventDefault();
   testimonials.scrollIntoView();
 });
 
-footerAContact.addEventListener("click", () => {
+footerAContact.addEventListener("click", (event) => {
+  event.preventDefault();
   contact.scrollIntoView();
 });
 
@@ -121,16 +131,24 @@ modalOverlay.style.backgroundColor = "rgba(0, 0, 0, 0.4";
 modalOverlay.style.overflow = "auto";
 modalOverlay.style.zIndex = "98";
 
-menuBtnFeatures.addEventListener("click", () => {
+menuBtnFeatures.addEventListener("click", (event) => {
+  event.preventDefault();
   features.scrollIntoView();
 });
 
-menuBtnServices.addEventListener("click", () => {
+menuBtnServices.addEventListener("click", (event) => {
+  event.preventDefault();
   services.scrollIntoView();
 });
 
-menuBtnContact.addEventListener("click", () => {
+menuBtnContact.addEventListener("click", (event) => {
+  event.preventDefault();
   contact.scrollIntoView();
+});
+
+menuBtnFaq.addEventListener("click", (event) => {
+  event.preventDefault();
+  footer.scrollIntoView();
 });
 
 menuSigninBtn.addEventListener("click", () => {
