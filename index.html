@@ -21,7 +21,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/screen/header.css" />
     <link rel="stylesheet" href="./assets/css/modal/menu.css" />
@@ -873,7 +872,7 @@
                 <div class="inner-orbit"></div>
               </div>
               <div class="services-slider">
-                <div class="services-card showing">
+                <div class="services-card">
                   <div>
                     <i class="fas fa-mobile-alt"></i>
                   </div>
@@ -882,7 +881,7 @@
                     Management
                   </p>
                 </div>
-                <div class="services-card">
+                <div class="services-card showing">
                   <div>
                     <i class="fas fa-rocket"></i>
                   </div>
@@ -936,7 +935,10 @@
               </div>
               <div class="services-indicators">
                 <button type="button" class="services-indicator"></button>
-                <button type="button" class="services-indicator"></button>
+                <button
+                  type="button"
+                  class="services-indicator showing"
+                ></button>
                 <button type="button" class="services-indicator"></button>
                 <button type="button" class="services-indicator"></button>
                 <button type="button" class="services-indicator"></button>
@@ -1006,7 +1008,10 @@
               </div>
               <div class="testimonials-indicators">
                 <button type="button" class="testimonials-indicator"></button>
-                <button type="button" class="testimonials-indicator"></button>
+                <button
+                  type="button"
+                  class="testimonials-indicator showing"
+                ></button>
                 <button type="button" class="testimonials-indicator"></button>
               </div>
             </article>
@@ -1075,12 +1080,12 @@
         <div class="row">
           <div class="col-12">
             <div class="footer-content">
-              <div class="footer-address">
-                <div class="footer-logo-group">
+              <div class="footer-info">
+                <div class="footer-logo">
                   <img src="./assets/images/footer-logo.png" alt="Logo Image" />
                   <h2>Siphome</h2>
                 </div>
-                <address>
+                <address class="footer-address">
                   <strong>Siphome, LLC</strong><br />
                   The New Building 2320<br />
                   Lang Avenue, Park Valley, Utah,<br />
@@ -1142,8 +1147,8 @@
                       <li>
                         <a href="https://www.facebook.com/" target="_blank">
                           <img
-                            src="./assets/images/footer/Facebook.png"
-                            alt="Facebook"
+                            src="./assets/images/footer/facebook.png"
+                            alt="Facebook Logo"
                           />
                           Facebook
                         </a>
@@ -1151,8 +1156,8 @@
                       <li>
                         <a href="https://twitter.com/" target="_blank">
                           <img
-                            src="./assets/images/footer/Twitter.png"
-                            alt="Twitter"
+                            src="./assets/images/footer/twitter.png"
+                            alt="Twitter Logo"
                           />
                           Twtiter
                         </a>
@@ -1160,8 +1165,8 @@
                       <li>
                         <a href="https://www.instagram.com/" target="_blank">
                           <img
-                            src="./assets/images/footer/Instagram.png"
-                            alt="Instagram"
+                            src="./assets/images/footer/instagram.png"
+                            alt="Instagram Logo"
                           />
                           Instagram
                         </a>
@@ -1171,7 +1176,7 @@
                 </div>
               </div>
             </div>
-            <p class="footer-copyright">
+            <p class="copyright">
               Copyright© 2020.<br />
               Siphome Smart home LLC.
             </p>
