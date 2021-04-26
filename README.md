@@ -6,7 +6,7 @@ skechapp 파일을 figma에서 디자인 시안을 확인하여 만든 반응형
 
 > 디자인 시안: https://www.sketchappsources.com/free-source/4635-smart-home-landing-page-sketch-freebie-resource.html
 
-URL: [https://sheeps1026.github.io/portfolio-02/](https://sheeps1026.github.io/portfolio-02/)
+URL: [https://sheeps1026.github.io/website-01/](https://sheeps1026.github.io/website-01/)
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/55824972/111652935-d0fb0000-884a-11eb-8b56-0bf1e898b143.gif)
 
@@ -18,5 +18,5 @@ URL: [https://sheeps1026.github.io/portfolio-02/](https://sheeps1026.github.io/p
 
 포트폴리오 리스트
 
-- [반응형 웹사이트 2](https://sheeps1026.github.io/portfolio-03/)
-- [메모앱](https://sheeps1026.github.io/portfolio-04/)
+- [반응형 웹사이트 2](https://sheeps1026.github.io/website-02/)
+- [메모앱](https://sheeps1026.github.io/the-book/)
